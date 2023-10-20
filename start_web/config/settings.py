@@ -31,7 +31,6 @@ BANDIZIP_PATH = os.path.join(ENV_PATH, r"BANDIZIP-PORTABLE\Bandizip.x64.exe")
 JAVA15_PATH = r"C:\Penetration\ProgramTools\Java\jre15.0.2\bin\java.exe"
 JAVA8_PATH = os.path.join(ENV_PATH, r"jre1.8\bin\java8.exe")
 JAVA17_PATH = os.path.join(ENV_PATH, r"jre17\bin\java17.exe")
-
 # 定义常用工具路径
 
 

@@ -1,3 +1,4 @@
+import pythoncom
 from werkzeug.utils import secure_filename
 import zipfile
 import json
@@ -17,7 +18,7 @@ import os
 import time
 from start_web.views.report.module.sqliteDbtools import *
 from start_web.views.report.module.auto_report_shell import *
-
+import subprocess
 script_path = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -67,6 +68,20 @@ docx_demo_file_path = os.path.join(
 
 @bp.route(f"/{tool_name}/list")
 def list():
+    # 检测环境变量是否可运行pandoc.exe
+    try:
+        result = subprocess.run(["pandoc", "--version"],
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    except Exception as e:
+        raise Exception("""系统没有可用的pandoc程序,请手动安装!
+官网:https://pandoc.org/installing.html""")
+
+    try:
+        pythoncom.CoInitialize()
+        word = win32.gencache.EnsureDispatch('Word.Application')
+    except Exception as e:
+        raise Exception("系统没有可用的office-word程序,请手动安装!")
+
     return render_template(
         f"{tool_name}/list.html",
         res=dict(

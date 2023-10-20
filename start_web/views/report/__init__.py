@@ -1,3 +1,4 @@
+import shutil
 import pythoncom
 from werkzeug.utils import secure_filename
 import zipfile
@@ -57,12 +58,21 @@ help_documnet_name = f"{tool_name}_help_document.txt"  # 帮助文件名称
 help_documnet_path = os.path.join(
     WEB_ROOT_PATH, "views", tool_name, help_documnet_name
 )  # 帮助文档路径
+
+source = os.path.join(WEB_ROOT_PATH, "views", tool_name, "files")
+destination = os.path.join(STATIC_OUTPUT_PATH, tool_name, "files")
+
+try:
+    shutil.copytree(source, destination)
+except Exception as e:
+    pass
+
 db_file_name = f"{tool_name}.db"
-db_file_path = os.path.join(WEB_ROOT_PATH, "views",
+db_file_path = os.path.join(STATIC_OUTPUT_PATH,
                             tool_name, "files", db_file_name)
 docx_demo_file_name = "demo.docx"
 docx_demo_file_path = os.path.join(
-    WEB_ROOT_PATH, "views", tool_name, "files", docx_demo_file_name
+    STATIC_OUTPUT_PATH, tool_name, "files", docx_demo_file_name
 )
 
 

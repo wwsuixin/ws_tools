@@ -1,0 +1,54 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<div class="layui-tab layui-tab-card" lay-filter="test-hash">
+    <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="添加任务">① 添加任务</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form">
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">IP地址
+                    </label>
+                    <div class="layui-input-block">
+                        <textarea name="targets" placeholder="" class="layui-textarea">1.1.1.1</textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-primary layui-border layui-border-green" lay-submit lay-filter="formDemo">
+                            生成</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+    //JS 
+    layui.use(['element', 'layer', 'util', "code"], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$
+            , form = layui.form;
+
+        //生成
+        form.on('submit(formDemo)', function (data) {
+            targets = data.field.targets
+            window.open("http://www.cip.cc/" + targets);
+            return false;
+        });
+
+
+    });
+</script>
+{% include "/public/footer.html" %}

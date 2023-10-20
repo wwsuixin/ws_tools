@@ -1,0 +1,98 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<form class="layui-form">
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">待处理文本</label>
+        <div class="layui-input-block">
+            <textarea name="data" id="data" placeholder="" class="layui-textarea">
+qq.com
+1.1.1.1
+            </textarea>
+        </div>
+    </div>
+    <!-- {% include 'public/help_document.html' %} -->
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn  layui-btn-primary layui-border layui-border-green" lay-submit
+                lay-filter="formRun"> 处理</button>
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-form-text">
+        <div class="layui-inline">
+            <label class="layui-form-label">格式化url</label>
+            <div class="layui-input-inline">
+                <textarea name="format_url" id="format_url" placeholder="" class="layui-textarea" rows="20">
+http://qq.com
+https://qq.com
+http://1.1.1.1
+https://1.1.1.1
+                </textarea>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">提取域名</label>
+            <div class="layui-input-inline">
+                <textarea name="format_domain" id="format_domain" placeholder="" class="layui-textarea" rows="20">
+qq.com
+                </textarea>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">提取IP</label>
+            <div class="layui-input-inline">
+                <textarea name="format_ip" id="format_ip" placeholder="" class="layui-textarea" rows="20">
+1.1.1.1
+                </textarea>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">提取IP+domain</label>
+            <div class="layui-input-inline">
+                <textarea name="format_ip_domain" id="format_ip_domain" placeholder="" class="layui-textarea" rows="20">
+1.1.1.1
+qq.com
+                </textarea>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<script>
+    //JS 
+    layui.use(['element', 'layer',], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$
+            , form = layui.form;
+
+        // 运行
+        form.on('submit(formRun)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res.tool_name}}/update",
+                data: JSON.stringify(data.field),
+                // data: { "shell": data.field['shell'] },
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    $("#format_url").val(res.data['url_list'].join("\n"));
+                    $("#format_domain").val(res.data['domain_list'].join("\n"));
+                    $("#format_ip").val(res.data['ip_list'].join("\n"));
+                    $("#format_ip_domain").val(res.data['ip_list'].join("\n") + "\n" + res.data['domain_list'].join("\n"));
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+
+
+
+    });
+</script>
+{% include "/public/footer.html" %}

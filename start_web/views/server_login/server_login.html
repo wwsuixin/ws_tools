@@ -1,0 +1,39 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<div class="layui-tab layui-tab-card" lay-filter="test-hash">
+    <ul class="layui-tab-title">
+        <li class="layui-this" lay-id="添加任务">① 添加任务</li>
+        <li lay-id="查看结果">② 查看结果</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form">
+                {% include 'public/tool_path.html' %}
+                <div class="layui-form-item" style="width: 300px;">
+                    <label class="layui-form-label">选择类型</label>
+                    <div class="layui-input-block">
+                        <select name="plugins" id="plugins">
+                            <option value="ssh" {% if res.plugins=='ssh' %}selected{% endif %}>ssh
+                            </option>
+                            <option value="sql" {% if res.plugins=='sql' %}selected{% endif %}>sql
+                            </option>
+                        </select>
+                        <div class="layui-form-mid layui-word-aux"></div>
+                    </div>
+                </div>
+                {% include 'public/target+help_documents.html' %}
+                {% include 'public/shell_template.html' %}
+                {% include 'public/button_group_new.html' %}
+            </form>
+        </div>
+        {% include 'public/result_output_table.html' %}
+
+
+    </div>
+
+</div>
+
+
+
+{% include "/public/footer.html" %}

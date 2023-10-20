@@ -1,0 +1,10 @@
+html {
+    /* background-color: #C7EDCC; */
+}
+#shell {
+    /* 设置 [待执行命令] 输入框样式 */
+    font-size: 16px;
+  }
+  .layui-body {
+    /* background-color: #e3e3e3; */
+  }

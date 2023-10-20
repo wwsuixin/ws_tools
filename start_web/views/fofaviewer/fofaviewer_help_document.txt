@@ -1,0 +1,7 @@
+[userinfo]
+#注册和登录时填写的email
+email = bennett_jyl@163.com
+
+
+#会员到个人资料可得到key，为32位的hash值
+key = a10c63d042d289e1c21512c2317dbdd0  

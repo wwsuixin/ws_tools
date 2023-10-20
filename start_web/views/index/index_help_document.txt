@@ -1,0 +1,24 @@
+#config.properties
+#Sun Sep 25 11:45:24 CST 2022
+proxy_ip=
+proxy_status=off
+proxy_type=HTTP
+api=https\://fofa.info
+email=516969506@qq.com
+max_size=9999
+proxy_port=
+proxy_password=
+proxy_user=
+key=4fef3896c4e08d46bba509a8ce057b5e
+#config.properties
+#Sun Sep 25 11:45:24 CST 2022
+proxy_ip=
+proxy_status=off
+proxy_type=HTTP
+api=https\://fofa.info
+email=516969506@qq.com
+max_size=9999
+proxy_port=
+proxy_password=
+proxy_user=
+key=4fef3896c4e08d46bba509a8ce057b5e

@@ -1,0 +1,8 @@
+Options:
+  --version          Show the version and exit.
+  -u, --url TEXT     指定目标URL，支持.git/.svn/.DS_Store，以及类index页面
+  -o, --outdir TEXT  指定下载目录，默认目录名为主机名
+  -p, --proxy TEXT   指定代理 scheme://[user:pass@]hostname:port
+  -f, --force        强制下载（可能会有蜜罐风险）
+  -d, --debug        调试模式 输出更多日志
+  --help             Show this message and exit.

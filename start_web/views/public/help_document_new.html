@@ -1,0 +1,35 @@
+<div class="layui-inline">
+    <label class="layui-form-label">帮助文档</label>
+    <div class="layui-input-inline" style="width: 800px;">
+        <textarea name="help_document" id="help_document" placeholder="" rows="10"
+            class="layui-textarea">{{res.help_document}}</textarea>
+        <div class="layui-form-mid layui-word-aux">
+            帮助文档写这儿，
+            <button type="button" class="layui-btn layui-btn-primary layui-border layui-border-green  layui-btn-primary layui-btn-sm" lay-submit
+                lay-filter="save_help_document">
+                点击保存
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use(function () {
+        var layer = layui.layer;
+        var $ = layui.$;
+        var form = layui.form;
+        // 帮助文档保存按钮
+        form.on('submit(save_help_document)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res['tool_name']}}/save",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+    });
+</script>

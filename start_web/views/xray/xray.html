@@ -1,0 +1,97 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<div class="layui-tab " lay-filter="test-hash">
+    <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="添加任务">① 添加任务</li>
+        <li lay-id="查看结果">② 查看结果</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form">
+                {% include 'public/tool_path.html' %}
+                <div class="layui-form-item">
+                    <label class="layui-form-label">选择插件</label>
+                    <div class="layui-input-inline" style="
+                    width: 500px;
+                ">
+                        <input type="text" name="plugins" placeholder="" autocomplete="off" class="layui-input"
+                            value="">
+                        <div class="layui-form-mid layui-word-aux">如: shiro | struts | thinkphp ,为空则全选</div>
+                    </div>
+                    <label class="layui-form-label">被动监听</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="listen_port" placeholder="" autocomplete="off" class="layui-input"
+                            value="1111">
+                        <div class="layui-form-mid layui-word-aux">可自定义端口</div>
+                    </div>
+                </div>
+                {% include 'public/target+help_documents.html' %}
+
+
+                {% include 'public/shell_template.html' %}
+
+                {% include 'public/button_group_new.html' %}
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn  layui-btn-primary layui-border layui-border-green " lay-submit lay-filter="formDemo_listen">
+                            生成被动扫描命令</button>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        {% include '/public/result_output_table.html' %}
+
+
+    </div>
+
+</div>
+
+
+
+<script>
+    //JS 
+    layui.use(['element', 'layer', 'util', "code"], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$
+            , form = layui.form;
+        //生成被动监听命令
+        form.on('submit(formDemo_listen)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/xray/update_listen",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    $("#shell").val(res.data);
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+        //生成
+        form.on('submit(formDemo)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res['tool_name']}}/update",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    $("#shell").val(res.data);
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+
+
+    });
+</script>
+{% include "/public/footer.html" %}

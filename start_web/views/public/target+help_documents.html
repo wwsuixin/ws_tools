@@ -1,0 +1,26 @@
+<div class="layui-form-item">
+    <div class="layui-inline">
+        <label class="layui-form-label">目标</label>
+        <div class="layui-input-inline" style="width: 500px;">
+            <textarea name="targets" id="targets" placeholder="" rows="10"
+                class="layui-textarea" >{{res.target_document}}</textarea>
+            <div class="layui-form-mid layui-word-aux">
+                为空则使用上次目标<br>
+                目标IP或url放这,将被写入 <a target="_blank" href="/static/output/{{res.tool_name}}/{{res.targets_name}}">target(点击查看)</a> 中
+            </div>
+        </div>
+
+        <label class="layui-form-label">帮助文档</label>
+        <div class="layui-input-inline" style="width: 600px;">
+            <textarea name="help_document" id="help_document" placeholder="" rows="10"
+                class="layui-textarea">{{res.help_document}}</textarea>
+            <div class="layui-form-mid layui-word-aux">
+                帮助文档写这儿，
+                <button type="button" class="layui-btn layui-btn-primary layui-border layui-border-green  layui-btn-primary layui-btn-sm" lay-submit
+                    lay-filter="save_help_document">
+                    点击保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

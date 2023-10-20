@@ -1,0 +1,309 @@
+-------------------------------------------------------------------------
+平替工具ghauri：
+https://github.com/r0oth3x49/ghauri
+-------------------------------------------------------------------------
+#############注意事项
+注入异常请注意是否存在xff头没有加白
+-------------------------------------------------------------------------
+https站点注入需要使用代理
+--proxy=http://127.0.0.1:8080
+-------------------------------------------------------------------------
+--force-ssl  忽略https证书
+–ignore-code=500 忽略500报错继续注入
+-------------------------------------------------------------------------
+空格替换 
+--tamper "space2comment.py"
+-------------------------------------------------------------------------
+###### 获取基本信息（当前用户，当前数据库，主机名，所有用户，密码）
+  --current-user      --current-db    --hostname    --users    --passwords
+-------------------------------------------------------------------------
+###### 是否是dba权限
+--is-dba
+-------------------------------------------------------------------------
+###### 禁用缓存
+--fresh-queries
+-------------------------------------------------------------------------
+######### 指定注入类型
+B表示布尔盲注，T表示时间盲注(延迟注入），E表示报错注入,U表示联合查询注入，S表示堆查询注入;
+--technique
+-------------------------------------------------------------------------
+当取值大于等于3时，将显示SQLMAP所使用的payload 详情
+-v
+-------------------------------------------------------------------------
+
+
+-o 添加此参数相当于同时添加下列三个优化参数
+–keep-alive --null-connection --threads=10
+参数：–-risk 此参数用于指定风险等级，有1~3共3级。默认风险等级为1,此等级在大多数情况下对测试目标无害。 风险等级2添加了基于时间的注入测试,等级3添加了OR测试。
+–string=STRING 查询时有效时在页面匹配字符串
+   --random-agent 随机请求头
+
+
+
+Options:
+  -h, --help            Show basic help message and exit
+  -hh                   显示高级帮助消息并退出
+  --version             显示程序的版本号并退出
+  -v VERBOSE            详细级别: 0-6 默认 1)
+
+  Target:
+    必须至少提供其中一个选项来定义目标(s)
+
+    -u URL, --url=URL   目标网址 (e.g. "http://www.site.com/vuln.php?id=1")
+    -d DIRECT           直接数据库连接的连接字符串
+    -l LOGFILE          分析Burp或WebScarab代理日志文件中的目标
+    -m BULKFILE         扫描文本文件中给定的多个目标
+    -r REQUESTFILE      从文件加载HTTP请求
+    -g GOOGLEDORK       将Google dork结果作为目标URL处理
+    -c CONFIGFILE       从配置INI文件加载选项
+
+  Request:
+    这些选项可用于指定如何连接到目标URL
+
+    -A AGENT, --user..  HTTP用户代理header值
+    -H HEADER, --hea..  Extra header (e.g. "X-Forwarded-For: 127.0.0.1")
+    --method=METHOD     强制使用给定HTTP方法(e.g. PUT)
+    --data=DATA         通过POST发送的数据字符串 (e.g. "id=1")
+    --param-del=PARA..  用于拆分参数值的字符 (e.g. &)
+    --cookie=COOKIE     HTTP Cookie header 值(e.g. "PHPSESSID=a8d127e..")
+    --cookie-del=COO..  用于拆分cookie值的字符 (e.g. ;)
+    --live-cookies=L..  用于加载最新值的实时cookie文件
+    --load-cookies=L..  包含Netscape/wget格式cookie的文件
+    --drop-set-cookie   忽略响应中的Set Cookie标头
+    --mobile            通过HTTP用户代理标头模拟智能手机
+    --random-agent      使用随机选择的HTTP用户代理header 值
+    --host=HOST         HTTP主机header值
+    --referer=REFERER   HTTP Refer header值
+    --headers=HEADERS   额外的header(e.g. "Accept-Language: fr\nETag: 123")
+    --auth-type=AUTH..  HTTP身份验证类型 (Basic, Digest, Bearer, ...)
+    --auth-cred=AUTH..  HTTP身份验证凭据 (name:password)
+    --auth-file=AUTH..  HTTP身份验证PEM证书/私钥文件
+    --ignore-code=IG..  忽略（有问题的）HTTP错误代码 (e.g. 401)
+    --ignore-proxy      忽略系统默认代理设置
+    --ignore-redirects  忽略重定向尝试
+    --ignore-timeouts   忽略连接超时
+    --proxy=PROXY       使用代理连接到目标URL
+    --proxy-cred=PRO..  代理身份验证凭据 (name:password)
+    --proxy-file=PRO..  从文件加载代理列表
+    --proxy-freq=PRO..  从给定列表更改代理之间的请求
+    --tor               使用Tor匿名网络
+    --tor-port=TORPORT  设置Tor代理端口而不是默认端口
+    --tor-type=TORTYPE  设置Tor代理类型（HTTP、SOCKS4或SOCKS5（默认值）)
+    --check-tor         检查Tor是否正确使用
+    --delay=DELAY       每个HTTP请求之间的延迟（秒）
+    --timeout=TIMEOUT   超时连接前等待的秒数（默认值 30)
+    --retries=RETRIES   连接超时时重试（默认值 3)
+    --retry-on=RETRYON  对匹配内容的正则表达式重试请求 (e.g. "drop")
+    --randomize=RPARAM  随机更改给定参数的值(s)
+    --safe-url=SAFEURL  测试期间经常访问的URL地址
+    --safe-post=SAFE..  要发送到安全URL的POST数据
+    --safe-req=SAFER..  从文件加载安全HTTP请求
+    --safe-freq=SAFE..  访问安全URL之间的定期请求
+    --skip-urlencode    跳过有效负载数据的URL编码
+    --csrf-token=CSR..  用于保存anti-CSRF token的参数
+    --csrf-url=CSRFURL  用于提取anti-CSRF token的访问URL地址
+    --csrf-method=CS..  在anti-CSRF token页访问期间使用的HTTP方法
+    --csrf-data=CSRF..  在anti-CSRF token页面访问期间发送POST数据t
+    --csrf-retries=C..  anti-CSRF token检索的重试 (默认 0)
+    --force-ssl         强制使用SSL/HTTPS
+    --chunked           使用HTTP分块传输编码（POST）请求
+    --hpp               使用HTTP参数污染方法
+    --eval=EVALCODE     在请求之前评估提供的Python代码 (e.g. "import
+                        hashlib;id2=hashlib.md5(id).hexdigest()")
+
+  Optimization:
+    这些选项可用于优化sqlmap的性能
+
+    -o                  打开所有优化开关
+    --predict-output    预测常见查询输出
+    --keep-alive        使用持久HTTP连接
+    --null-connection   检索没有实际HTTP响应正文的页面长度
+    --threads=THREADS   最大并发HTTP请求数 (默认 1)
+
+  Injection:
+    这些选项可用于指定要测试的参数、提供自定义注入有效载荷和可选的篡改脚本
+
+    -p TESTPARAMETER    可测试参数(s)
+    --skip=SKIP         跳过给定参数的测试(s)
+    --skip-static       跳过看起来不是动态的测试参数
+    --param-exclude=..  Regexp从测试中排除参数 (e.g. "ses")
+    --param-filter=P..  按位置选择可测试参数 (e.g. "POST")
+    --dbms=DBMS         强制提供后端数据库 值
+    --dbms-cred=DBMS..  DBMS身份验证凭据 (user:password)
+    --os=OS             强制后端数据库操作系统使用提供的值
+    --invalid-bignum    使用大数字使值无效
+    --invalid-logical   使用逻辑运算使值无效
+    --invalid-string    使用随机字符串使值无效
+    --no-cast           关闭有效载荷投射机构
+    --no-escape         关闭字符串转义机制
+    --prefix=PREFIX     注入有效负载前缀字符串
+    --suffix=SUFFIX     注入有效载荷后缀字符串
+    --tamper=TAMPER     使用给定脚本temper注入数据
+
+  Detection:
+    这些选项可用于自定义检测阶段
+
+    --level=LEVEL       要执行的测试级别 (1-5, 默认 1)
+    --risk=RISK         执行测试的风险 (1-3, 默认 1)
+    --string=STRING     当查询求值为True时要匹配的字符串
+    --not-string=NOT..  当查询求值为False时要匹配的字符串
+    --regexp=REGEXP     当查询求值为True时要匹配的Regexp
+    --code=CODE         当查询求值为True时要匹配的HTTP代码
+    --smart             只有在判断存在注入的情况下才执行彻底测试(s)
+    --text-only         仅基于文本内容比较页面
+    --titles            仅根据标题比较页面
+
+  Techniques:
+    这些选项可用于调整特定SQL注入技术的测试
+
+    --technique=TECH..  要使用的SQL注入技术 (默认 "BEUSTQ")
+    --time-sec=TIMESEC  延迟DBMS响应的秒数 (default 5)
+    --union-cols=UCOLS  要测试UNION查询SQL注入的列范围
+    --union-char=UCHAR  用于计算列数的字符
+    --union-from=UFROM  UNION查询SQL注入的FROM部分中使用的表
+    --dns-domain=DNS..  用于DNS过滤攻击的域名
+    --second-url=SEC..  用于DNS exfiltration附件的域名搜索到二级响应的结果页面URL
+    --second-req=SEC..  从文件加载二阶HTTP请求
+
+  Fingerprint:
+    -f, --fingerprint   执行广泛的DBMS版本指纹
+
+  Enumeration:
+    这些选项可用于枚举表中包含的后端数据库管理系统信息、结构和数据
+
+    -a, --all           检索所有内容
+    -b, --banner        检索DBMS名称
+    --current-user      检索DBMS当前用户
+    --current-db        检索DBMS当前数据库
+    --hostname          检索DBMS服务器主机名
+    --is-dba            检测DBMS当前用户是否为DBA
+    --users             枚举DBMS用户
+    --passwords         枚举DBMS用户密码哈希
+    --privileges        枚举DBMS用户权限
+    --roles             枚举DBMS用户角色
+    --dbs               枚举DBMS数据库
+    --tables            枚举DBMS数据库表
+    --columns           枚举DBMS数据库表列
+    --schema            枚举DBMS架构
+    --count             检索表的条目数(s)
+    --dump              转储DBMS数据库表条目
+    --dump-all          转储所有DBMS数据库表条目
+    --search            搜索列(s), 表(s) 或数据库名称(s)
+    --comments          枚举期间检查DBMS注释
+    --statements        检索DBMS上运行的SQL语句
+    -D DB               要枚举的DBMS数据库
+    -T TBL              要枚举的DBMS数据库表
+    -C COL              要枚举的DBMS数据库表列
+    -X EXCLUDE          无法枚举的DBMS数据库标识符
+    -U USER             要枚举的DBMS用户
+    --exclude-sysdbs    枚举表时排除DBMS系统数据库
+    --pivot-column=P..  数据透视表列名称
+    --where=DUMPWHERE   表转储时使用WHERE条件
+    --start=LIMITSTART  要检索的第一个转储表条目
+    --stop=LIMITSTOP    要检索的最后一个转储表条目
+    --first=FIRSTCHAR   要检索的第一个查询输出单词字符
+    --last=LASTCHAR     要检索的最后一个查询输出单词字符
+    --sql-query=SQLQ..  要执行的SQL语句
+    --sql-shell         提示输入交互式SQL shell
+    --sql-file=SQLFILE  从给定文件执行SQL语句(s)
+
+  Brute force:
+    这些选项可用于运行暴力检查
+
+    --common-tables     检查是否存在公用表
+    --common-columns    检查是否存在公共列
+    --common-files      检查是否存在通用文件
+
+  User-defined function injection:
+    这些选项可用于创建自定义用户定义函数
+
+    --udf-inject        注入自定义用户定义函数
+    --shared-lib=SHLIB  共享库的本地路径
+
+  File system access:
+    这些选项可用于访问后端数据库管理系统底层文件系统
+
+    --file-read=FILE..  从后端数据库文件系统读取文件
+    --file-write=FIL..  在后端数据库文件系统上写入本地文件
+    --file-dest=FILE..  要写入的后端数据库绝对文件路径
+
+  Operating system access:
+    这些选项可用于访问后端数据库管理系统底层操作系统
+
+    --os-cmd=OSCMD      执行操作系统命令
+    --os-shell          提示输入交互式操作系统外壳
+    --os-pwn            提示输入 OOB shell, Meterpreter 或者 VNC
+    --os-smbrelay       单击提示输入 OOB shell, Meterpreter o或者 VNC
+    --os-bof            存储过程缓冲区溢出 exploitation
+    --priv-esc          数据库进程用户权限升级
+    --msf-path=MSFPATH  安装Metasploit Framework的本地路径
+    --tmp-path=TMPPATH  临时文件目录的远程绝对路径
+
+  Windows registry access:
+    这些选项可用于访问后端数据库管理系统Windows注册表
+
+    --reg-read          读取Windows注册表项值
+    --reg-add           写入Windows注册表项值数据
+    --reg-del           删除Windows注册表项值
+    --reg-key=REGKEY    Windows注册表项
+    --reg-value=REGVAL  Windows注册表项值
+    --reg-data=REGDATA  Windows注册表项值数据
+    --reg-type=REGTYPE  Windows注册表项值类型
+
+  General:
+    这些选项可用于设置一些常规工作参数
+
+    -s SESSIONFILE      从存储的（.sqlite）文件加载会话
+    -t TRAFFICFILE      将所有HTTP流量记录到txt中
+    --answers=ANSWERS   设置预定义的答案 (e.g. "quit=N,follow=N")
+    --base64=BASE64P..  包含Base64编码数据的参数
+    --base64-safe       使用URL和文件名安全的Base64字母表 (RFC 4648)
+    --batch             从不要求用户输入，使用默认行为
+    --binary-fields=..  具有二进制值的结果字段 (e.g. "digest")
+    --check-internet    测试目标前检查Internet连接
+    --cleanup           从sqlmap特定的UDF和表中清理DBMS
+    --crawl=CRAWLDEPTH  从目标URL开始爬取网站
+    --crawl-exclude=..  Regexp从爬取中排除页面 (e.g. "logout")
+    --csv-del=CSVDEL    CSV输出中使用的分隔字符 (default ",")
+    --charset=CHARSET   盲SQL注入字符集 (e.g. "0123456789abcdef")
+    --dump-file=DUMP..  将转储的数据存储到自定义文件
+    --dump-format=DU..  转储数据的格式（CSV（默认）、HTML或SQLITE）
+    --encoding=ENCOD..  用于数据检索的字符编码(e.g. GBK)
+    --eta               显示每个输出的估计到达时间
+    --flush-session     刷新当前目标的会话文件
+    --forms             分析和测试目标URL上的表单
+    --fresh-queries     忽略存储在会话文件中的查询结果
+    --gpage=GOOGLEPAGE  使用指定页码的Google dork结果
+    --har=HARFILE       将所有HTTP流量记录到HAR文件中
+    --output-dir=OUT..  自定义输出目录路径
+    --parse-errors      分析和显示响应中的DBMS错误消息
+    --preprocess=PRE..  使用给定脚本进行预处理(请求)
+    --postprocess=PO..  使用给定脚本进行后处理（响应)
+    --repair            重新转储具有未知字符标记的条目 (?)
+    --save=SAVECONFIG   将选项保存到配置INI文件
+    --scope=SCOPE       用于筛选目标的Regexp
+    --skip-heuristics   跳过漏洞的启发式检测
+    --skip-waf          跳过WAF/IPS保护的启发式检测
+    --table-prefix=T..  用于临时表的前缀（默认值: "sqlmap")
+    --test-filter=TE..  按有效载荷和/或标题选择测试(e.g. ROW)
+    --test-skip=TEST..  按有效载荷和/或标题跳过测试 (e.g. BENCHMARK)
+    --web-root=WEBROOT  Web服务器文档根目录 (e.g. "/var/www")
+
+  Miscellaneous:
+    这些选项不属于任何其他类别
+
+    -z MNEMONICS        使用短助记符(e.g. "flu,bat,ban,tec=EU")
+    --alert=ALERT       找到SQL注入时运行主机OS命令
+    --beep              出现问题和/或发现漏洞时发出蜂鸣声
+    --dependencies      检查缺少的（可选）sqlmap依赖项
+    --disable-coloring  禁用控制台输出着色
+    --list-tampers      显示可用篡改脚本的列表
+    --no-logging        禁用日志记录到文件
+    --offline           在脱机模式下工作（仅使用会话数据）
+    --purge             安全地从sqlmap数据目录中删除所有内容
+    --results-file=R..  多目标模式下CSV结果文件的位置
+    --shell             提示输入交互式sqlmap shell
+    --tmp-dir=TMPDIR    用于存储临时文件的本地目录
+    --unstable          调整不稳定连接的选项
+    --update            更新sqlmap
+    --wizard            初学者用户的简单向导界面

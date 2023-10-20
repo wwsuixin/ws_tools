@@ -1,0 +1,40 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<div class="layui-tab layui-tab-card" lay-filter="test-hash">
+    <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="添加任务">① 添加任务</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">
+                        清理路径<br>
+                        按行写入
+                    </label>
+                    <div class="layui-input-block">
+                        <textarea name="clean_path_str" id="targets" placeholder="" rows="10"
+                            class="layui-textarea">{{res.help_document}}</textarea>
+                        <div class="layui-form-mid layui-word-aux">
+                            格式：C:\Users\Public\ws_tools\start_web\static\output<br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">待执行命令</label>
+                    <div class="layui-input-block">
+                        <textarea name="shell" id="shell" placeholder="" class="layui-textarea"></textarea>
+                        <div class="layui-form-mid layui-word-aux">先点击[生成],可修改生成的值进行自定义,再点击[运行]</div>
+                    </div>
+                </div>
+
+                {% include 'public/button_group_new.html' %}
+
+            </form>
+        </div>
+    </div>
+
+</div>
+{% include "/public/footer.html" %}

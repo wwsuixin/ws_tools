@@ -1,0 +1,98 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<div class="layui-tab layui-tab-card" lay-filter="test-hash">
+    <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="添加任务">① 添加任务</li>
+        <li lay-id="查看结果">② 查看结果</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form">
+                {% include 'public/target+help_documents.html' %}
+
+         
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">待执行命令</label>
+                    <div class="layui-input-block">
+                        <textarea name="shell" id="shell" placeholder="" class="layui-textarea"></textarea>
+                    <div class="layui-form-mid layui-word-aux">先点击[生成],可修改生成的值进行自定义,再点击[运行]</div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn  layui-btn-primary layui-border layui-border-green  " lay-submit lay-filter="formDemo"> 生成</button>
+                        <button class="layui-btn  layui-btn-primary layui-border layui-border-green    layui-btn-normal" lay-submit lay-filter="formRun">
+                            运行</button>
+                        
+                        <input type="text" name="result_path" autocomplete="off" class="layui-input"
+                            style="display:none" value="{{ res['result_path']|default() }}">
+                        <button class="layui-btn  layui-btn-primary layui-border layui-border-green   layui-btn-warm" lay-submit
+                            lay-filter="formOpen_res">
+                            打开结果路径</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for output in res.result_output_list %}
+                    <tr>
+                        <td><a href="/static/output/{{output}}" target="_blank">{{output}}</a></td>
+                        <td><a href="/static/output/{{output}}" target="_blank">查看</a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    //JS 
+    layui.use(['element', 'layer', 'util', "code"], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$
+            , form = layui.form;
+
+
+        //提交
+        form.on('submit(formDemo)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res['tool_name']}}/update",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    $("#shell").val(res.data);
+                    layer.msg(res.msg);
+                }
+            })
+            // layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+
+
+    });
+</script>
+</body>
+
+</html>
+{% include "/public/footer.html" %}

@@ -1,0 +1,3 @@
+使用正则进行结果分析：  https://tool.chinaz.com/regex/
+.*password.*
+.*username.*

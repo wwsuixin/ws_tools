@@ -1,0 +1,108 @@
+</div>
+</div>
+<!-- <div class="layui-footer">
+    版权所有 ws 2022-
+</div> -->
+
+</div>
+<script src="{{ url_for('static', filename='layui/layui.js') }}"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    layui.use(['element', 'layer', 'util', "code",], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$
+            , form = layui.form;
+
+
+        element.on('nav(top_left)', function (data) {
+
+            if (data.text() == "清理结果") {
+                temp_url = "/clean/"
+                msg = "清理所有扫描结果"
+            } else if (data.text() == "一键日站") {
+                temp_url = "/penetration/"
+                msg = "一键启动[yakit,chrome]"
+            } else if (data.text() == "反弹shell") {
+                temp_url = "/reverse_shell_generator/"
+                msg = "反弹shell"
+            } else {
+                // 其他按钮直接执行,不询问
+                return false
+            }
+
+            layer.confirm(msg, { icon: 3, title: '提示' }, function (index) {
+                $.ajax({
+                    type: "POST",
+                    url: temp_url,
+                    dataType: "json",
+                    success: function (res) {
+                        console.log(res);
+                        layer.msg(res.msg);
+                    }
+                })
+
+                layer.close(index);
+            });
+
+        });
+        // 打开结果路径
+        form.on('submit(formOpen_res)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/exec/update",
+                data: JSON.stringify({ "shell": "explorer " + data.field['result_path'] + ";exit" }),
+                // data: { "shell": data.field['shell'] },
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    layer.msg(res.msg);
+                }
+            })
+            // layer.msg(JSON.stringify());
+            return false;
+        });
+        // 打开工具路径
+        form.on('submit(formOpen)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/exec/update",
+                data: JSON.stringify({ "shell": "explorer " + data.field['dir_path'] + ";exit" }),
+                // data: { "shell": data.field['shell'] },
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    layer.msg(res.msg);
+                }
+            })
+            // layer.msg(JSON.stringify());
+            return false;
+        });
+        // 运行
+        form.on('submit(formRun)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/exec/update",
+                data: JSON.stringify({ "shell": data.field['shell'] }),
+                // data: { "shell": data.field['shell'] },
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    layer.msg(res.msg);
+                }
+            })
+            // layer.msg(JSON.stringify());
+            return false;
+        });
+    });
+    // 设置高亮该页左侧导航栏
+    window.onload = function () {
+        url = window.location.pathname;
+        // console.log(url);
+        $("a[href='" + url + "']").parent().addClass("layui-this")
+
+        $("a[href='" + url + "']").parent().parent().parent().addClass("layui-nav-itemed")
+    }
+
+</script>

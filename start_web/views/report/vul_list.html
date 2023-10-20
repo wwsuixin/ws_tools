@@ -1,0 +1,242 @@
+{% include "/public/header.html" %}
+
+<div class="layui-card">
+    <div class="layui-card-header">{{res.h1}}</div>
+    <div class="layui-card-body">
+        <table id="demo" lay-filter="test"></table>
+    </div>
+</div>
+<script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+      <button class="layui-btn layui-btn-sm" lay-event="add">添加</button>
+      <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</button> 
+    </div>
+  </script>
+<script>
+    //Demo
+    layui.extend({ selectInput: "{{ url_for('static', filename='js/selectInput/selectInput') }}" });
+
+    layui.use(function () {
+        var form = layui.form;
+        var laydate = layui.laydate;
+        var table = layui.table;
+        var jq = layui.jquery;
+        var layer = layui.layer;
+        var dropdown = layui.dropdown;
+        var colorpicker = layui.colorpicker;
+        //渲染漏洞管理表格
+        table.render({
+            elem: '#demo'
+            // , height: 500
+            , url: 'api/vul' //数据接口
+            , where: { action: "program_list" }
+            , page: false //开启分页
+            , toolbar: '#toolbarDemo'
+            , css: [ // 设置单元格样式
+                // 取消默认的溢出隐藏，并设置适当高度
+                '.layui-table-cell{height: 50px; line-height: 40px;}',
+                '.layui-table-cell .layui-colorpicker{width: 38px; height: 38px;}',
+                '.layui-table-cell select{height: 36px; padding: 0 5px;}'
+            ].join('')
+            , cols: [[ //表头
+                { type: 'checkbox', fixed: 'left' }
+                , { field: 'id', title: 'ID', width: 125, align: 'center', sort: true }
+                , { field: 'vul_type_name', title: '漏洞类型', sort: true, edit: "text", width: 200, }
+                , { field: 'vul_name', title: '漏洞名称', sort: true, width: 200, edit: "text" }
+                , { field: 'vul_desc', title: '漏洞描述', edit: "text" }
+                , { field: 'vul_repair', title: '修复建议', edit: "text" }
+                , {
+                    field: 'vul_level', title: '漏洞等级', width: 125, align: 'center', edit: "text", templet: function (d) {
+                        if (d.vul_level === '1') {
+                            return '低危'
+                        } else if (d.vul_level === '2') {
+                            return '中危'
+                        } else if (d.vul_level === '3') {
+                            return '高危'
+                        } else {
+                            return '未知'
+                        }
+                    }
+                }
+            ]]
+            , done: function (res, curr, count) {
+                var options = this;
+                // 公用数据更新函数，多个地方应用
+                var update = function (data) {
+                    var vul_level = data['vul_level']
+                    if (vul_level === '高危') {
+                        vul_level = 3;
+                    } else if (vul_level === '中危') {
+                        vul_level = 2;
+                    } else if (vul_level === '低危') {
+                        vul_level = 1;
+                    }
+                    jq.ajax({
+                        url: "api/vul",
+                        data: {
+                            action: "update",
+                            vul_type_name: data['vul_type_name'],
+                            vul_name: data['vul_name'],
+                            vul_desc: data['vul_desc'],
+                            vul_repair: data['vul_repair'],
+                            vul_level: vul_level,
+                            id: data['id'],
+                        },
+                        dataType: "json",
+                        type: "POST",
+                        success: function (res) {
+                            data = res.data
+                            layer.msg(data)
+                        }
+                    })
+                }
+                // 获取当前行数据
+                table.getRowData = function (elem) {
+                    var index = jq(elem).closest('tr').data('index');
+                    return table.cache[options.id][index] || {};
+                };
+
+                // 单元格编辑后的事件
+                table.on('edit(test)', function (obj) {
+                    var data = obj.data // 得到所在行所有键值
+                    // 值的校验
+                    update(data)
+
+                })
+                //漏洞管理顶部工具栏按钮点击事件
+                table.on('toolbar(test)', function (obj) {
+                    var checkStatus = table.checkStatus(obj.config.id);
+                    //获取表单区域所有值
+                    var report_info = form.val("report_info");
+                    switch (obj.event) {
+                        case "add":
+                            layer.open({
+                                type: 1,
+                                shadeClose: true,
+                                area: ['700px', '520px'],
+                                title: '添加漏洞描述',
+                                content: `
+                                <div class="layui-form" lay-filter="filter-test-layer" style="margin: 10px 10px 0 0;">
+    <div class="demo-login-container">
+        <div class="layui-form-item">
+            <label class="layui-form-label">漏洞类型</label>
+            <div class="layui-input-block">
+                <input type="text" name="vul_type_name" value="" lay-verify="required" placeholder="请填写漏洞类型"
+                    lay-reqtext="请填写漏洞类型" autocomplete="off" class="layui-input" lay-affix="clear">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">漏洞名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="vul_name" value="" lay-verify="required" placeholder="请填写漏洞名称"
+                    lay-reqtext="请填写漏洞名称" autocomplete="off" class="layui-input" lay-affix="clear">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">漏洞等级</label>
+            <div class="layui-input-block">
+                <select name="vul_level">
+                    <option value="">请选择漏洞等级</option>
+                    <option value="3">高危</option>
+                    <option value="2">中危</option>
+                    <option value="1">低危</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">漏洞描述</label>
+            <div class="layui-input-block">
+                <textarea name="vul_desc" placeholder="请输入漏洞描述内容" class="layui-textarea "></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">修复建议</label>
+            <div class="layui-input-block">
+                <textarea name="vul_repair" placeholder="请输入修复建议内容" class="layui-textarea "></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="button_save">保存</button>
+        </div>
+    </div>
+</div>
+        `,
+                                success: function () {
+                                    // 对弹层中的表单进行初始化渲染
+                                    form.render();
+                                    // 表单提交事件
+                                    form.on('submit(button_save)', function (data) {
+                                        var field = data.field; // 获取表单字段值
+                                        // 显示填写结果，仅作演示用
+
+                                        // 此处可执行 Ajax 等操作
+                                        jq.ajax({
+                                            url: "api/vul",
+                                            data: {
+                                                action: "add",
+                                                vul_type_name: field['vul_type_name'],
+                                                vul_name: field['vul_name'],
+                                                vul_desc: field['vul_desc'],
+                                                vul_repair: field['vul_repair'],
+                                                vul_level: field['vul_level'],
+                                            },
+                                            dataType: "json",
+                                            type: "POST",
+                                            success: function (res) {
+                                                data = res.data
+                                                layer.msg(data)
+                                            }
+                                        })
+                                        return false; // 阻止默认 form 跳转
+                                    });
+                                }
+                            });
+                            break;
+                        case "del":
+                            layer.confirm('确定删除所选吗?', { icon: 3, title: '提示' }, function (index) {
+                                //do something
+                                var checkStatus = table.checkStatus('demo'); //idTest 即为基础参数 id 对应的值
+                                var ids = "";
+                                for (i = 0; i < checkStatus.data.length; i++) {
+                                    console.log(checkStatus.data[i]);
+                                    ids += checkStatus.data[i].id + ","
+                                }
+
+                                jq.ajax({
+                                    url: "api/vul",
+                                    data: {
+                                        action: "del",
+                                        ids: ids,
+                                    },
+                                    dataType: "json",
+                                    type: "POST",
+                                    success: function (res) {
+                                        data = res.data
+                                        layer.msg(data)
+                                        location.reload();
+                                    }
+                                })
+                                layer.close(index);
+                            });
+                            break;
+                    };
+                });
+
+                // 触发行内单元格工具事件
+                table.on('tool(test)', function (obj) { // 双击 toolDouble
+                    var data = obj.data; // 获得当前行数据
+                    if (obj.event === 'edit') {
+                        window.location.href = 'add?id=' + data.id;
+                    }
+                });
+            }
+        });
+
+
+
+    });
+</script>
+</body>
+
+</html>

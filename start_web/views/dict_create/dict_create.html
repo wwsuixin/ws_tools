@@ -1,0 +1,219 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<form class="layui-form">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">域名关键词</label>
+            <div class="layui-input-inline" style="width: 300px;">
+                <textarea name="keyword" id="keyword" placeholder="" class="layui-textarea" rows="10">sangfor</textarea>
+                <div class="layui-form-mid layui-word-aux">
+                    根据规则将组成<br>
+                    ['sangfor@123','Sangfor_123']等<br>
+                    只要英文
+                </div>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">姓名字典</label>
+            <div class="layui-input-inline" style="width: 500px;">
+                <textarea name="xingming" id="xingming" placeholder="" rows="10" class="layui-textarea"></textarea>
+                <div class="layui-form-mid layui-word-aux">
+                    该数据将转换为首拼,将组成<br>
+                    ['zs@2022','zs_2022']等<br>
+                    只要中文<br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="layui-btn-container">
+                <button class="layui-btn  layui-btn-primary layui-border layui-border-green" lay-submit
+                    lay-filter="form_create">
+                    生成</button>
+                <button class="layui-btn  layui-btn-primary layui-border layui-border-green" lay-submit
+                    lay-filter="formContrast">
+                    比较</button>
+                <!-- 打开结果路径 -->
+                {% if res['result_path'] != null %}
+                <input type="text" name="result_path" autocomplete="off" class="layui-input" style="display:none"
+                    value="{{ res['result_path']|default() }}">
+                <button class="layui-btn  layui-btn-primary layui-border layui-border-green  " lay-submit
+                    lay-filter="formOpen_res">
+                    打开结果路径</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline" style="width: 500px;">
+            <div class="layui-form-mid layui-word-aux">
+                生成的字典将被写入 <a target="_blank" href="/static/output/dict_create/password.txt">password_dict(点击查看)</a> 中
+            </div>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">MD5值</label>
+        <div class="layui-input-block">
+            <textarea name="md5" id="md5" placeholder="" class="layui-textarea" rows="7"></textarea>
+            <div class="layui-form-mid layui-word-aux">将通过生成的字典碰撞md5值，当前支持碰撞32位MD5及40位SHA1
+                <br>
+                解密结果将被写入 <a target="_blank"
+                    href="/static/output/dict_create/result_demd5.txt">dict_create_result_demd5(点击查看)</a> 中
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">用户字典</label>
+            <div class="layui-input-inline" style="width: 500px;">
+                <textarea name="username_str" id="username_str" placeholder="" rows="10"
+                    class="layui-textarea">{{res.username_str}}</textarea>
+                <div class="layui-form-mid layui-word-aux">
+                    用户字典
+                    <button type="button"
+                        class="layui-btn layui-btn-primary layui-border layui-border-green  layui-btn-primary layui-btn-sm"
+                        lay-submit lay-filter="save_username">
+                        点击保存
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">密码字典</label>
+            <div class="layui-input-inline" style="width: 500px;">
+                <textarea name="password_str" id="password_str" placeholder="" rows="10"
+                    class="layui-textarea">{{res.password_str}}</textarea>
+                <div class="layui-form-mid layui-word-aux">
+                    密码字典
+                    <button type="button"
+                        class="layui-btn layui-btn-primary layui-border layui-border-green  layui-btn-primary layui-btn-sm"
+                        lay-submit lay-filter="save_password">
+                        点击保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="layui-inline">
+        <label class="layui-form-label">默认口令</label>
+        <div class="layui-input-inline" style="width: 500px;">
+            <textarea name="default_password_str" id="default_password_str" placeholder="" rows="10"
+                class="layui-textarea">{{res.default_password_str}}</textarea>
+            <div class="layui-form-mid layui-word-aux">
+                默认口令
+                <button type="button"
+                    class="layui-btn layui-btn-primary layui-border layui-border-green  layui-btn-primary layui-btn-sm"
+                    lay-submit lay-filter="save_default_password">
+                    点击保存
+                </button>
+            </div>
+        </div>
+    </div> -->
+</form>
+
+
+<script>
+    //JS 
+    layui.use(function () {
+        var layer = layui.layer
+            , $ = layui.$
+            , form = layui.form;
+        var util = layui.util;
+        var element = layui.element;
+        // 帮助文档保存按钮
+        form.on('submit(save_username)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res['tool_name']}}/save_username",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+        form.on('submit(save_password)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res['tool_name']}}/save_password",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+        form.on('submit(save_default_password)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res['tool_name']}}/save_default_password",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+        // 运行
+        form.on('submit(form_create)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res.tool_name}}/update",
+                data: JSON.stringify(data.field),
+                // data: { "shell": data.field['shell'] },
+                dataType: "json",
+                beforeSend: function () {
+                    layer.msg('正在处理，请稍等，可通过控制台查看进度......', {
+                        icon: 6,
+                        time: 120000
+                    });
+                },
+                success: function (res) {
+                    layer.closeAll();
+                    console.log(res);
+                    layer.alert(res.msg);
+                }
+            })
+            return false;
+        });
+        // 比较
+        form.on('submit(formContrast)', function (data) {
+            var index
+            $.ajax({
+                type: "POST",
+                url: "/{{res.tool_name}}/contrast",
+                data: JSON.stringify(data.field),
+                // data: { "shell": data.field['shell'] },
+                dataType: "json",
+                beforeSend: function () {
+                    layer.msg('正在处理，请稍等，可通过控制台查看进度......', {
+                        icon: 6,
+                        time: 120000
+                    });
+                },
+                success: function (res) {
+                    layer.closeAll();
+                    console.log(res);
+                    layer.alert(res.msg);
+                }
+            })
+            return false;
+        });
+
+
+    });
+</script>
+{% include "/public/footer.html" %}

@@ -1,0 +1,21 @@
+<div class="layui-tab-item">
+    <table class="layui-table">
+        <colgroup>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for output in res.result_output_list %}
+            <tr>
+                <td><a href="/static/output/{{output}}" target="_blank">{{output}}</a></td>
+                <td><a href="/static/output/{{output}}" target="_blank">查看</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</div>

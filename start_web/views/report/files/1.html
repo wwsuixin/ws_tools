@@ -1,0 +1,586 @@
+<p><img src="media/image1.png" style="width:8.275in;height:11.70972in"
+alt="渗透测试报告" /></p>
+<p>渗透测试报告</p>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>客户名称</th>
+<th>{{report_center}}</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>报告时间</td>
+<td>{{ report_end_time }}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>文档说明</strong></p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 33%" />
+<col style="width: 16%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>文档名称</th>
+<th colspan="3">{{report_center}}渗透测试报告</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>文档管理编号</td>
+<td colspan="3">SFSS-PT-R0101</td>
+</tr>
+<tr class="even">
+<td>保密级别</td>
+<td>商密</td>
+<td>文档版本号</td>
+<td>V1.0</td>
+</tr>
+<tr class="odd">
+<td>制作人</td>
+<td>深信服安全服务团队</td>
+<td>制作日期</td>
+<td>{{ report_end_time }}</td>
+</tr>
+<tr class="even">
+<td>复审人</td>
+<td>深信服安全服务团队</td>
+<td>复审日期</td>
+<td>{{ report_end_time }}</td>
+</tr>
+<tr class="odd">
+<td>扩散范围</td>
+<td colspan="3">限“深信服科技股份有限公司项目组”、{{report_center}}</td>
+</tr>
+<tr class="even">
+<td>分发控制</td>
+<td
+colspan="3">深信服：创建、修改、读取。{{report_center}}项目组：读取。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>版本变更记录</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>修改日期</th>
+<th>版本</th>
+<th>说明</th>
+<th>修改人</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>{{ report_end_time }}</td>
+<td>V1.0</td>
+<td>正式版本</td>
+<td>深信服安全服务团队</td>
+</tr>
+</tbody>
+</table>
+<p><strong>适用范围</strong></p>
+<p>本次渗透测试是由{{report_center}}授权，由深信服科技股份有限公司（以下简称“深信服”）对{{report_center}}进行的安全风险深度评估，根据评估结果提交技术报告，用于对该网站系统的安全状况做出安全评估和加固建议，仅限于“深信服”、{{report_center}}内部人员传阅。</p>
+<p>本报告结论的有效性建立在被测试单位提供相关证据的真实性基础之上。本报告中给出的评估结论仅对被评估的信息系统当时的安全状态有效，当信息系统发生涉及到的系统构成组件（或子系统）变更时本报告不再适用。</p>
+<p><strong>版权声明</strong></p>
+<p>本文中出现的任何文字叙述、文档格式、插图、照片、方法、过程等内容，除另有特别注明，版权均属深信服所有，受到有关产权及版权法保护。任何个人、机构未经深信服的书面授权许可，不得以任何方式复制或引用本文的任何片段。</p>
+<p>目录</p>
+<p><a href="#摘要">摘要 <span>1</span></a></p>
+<p><a href="#渗透测试说明">1渗透测试说明 <span>3</span></a></p>
+<p><a href="#测试时间">1.1 测试时间 <span>3</span></a></p>
+<p><a href="#测试人员">1.2 测试人员 <span>3</span></a></p>
+<p><a href="#测试范围与账户使用情况">1.3 测试范围与账户使用情况
+<span>3</span></a></p>
+<p><a href="#_Toc1027510204">2 问题总览 <span>3</span></a></p>
+<p><a href="#风险总览">2.1 风险总览 <span>3</span></a></p>
+<p><a href="#漏洞概况">2.2 漏洞概况 <span>4</span></a></p>
+<p><a href="#渗透测试漏洞详情">3 渗透测试漏洞详情 <span>4</span></a></p>
+<p><a href="#report_systemname-for-item-in-vuls">3.1
+{{report_systemname}} 4</a></p>
+<p><a href="#渗透测试依据和参考">4 渗透测试依据和参考
+<span>5</span></a></p>
+<p><a href="#渗透测试工作说明">5 渗透测试工作说明 <span>6</span></a></p>
+<p><a href="#测试方法">5.1 测试方法 <span>6</span></a></p>
+<p><a href="#漏洞评级标准">5.2 漏洞评级标准 <span>6</span></a></p>
+<p><a href="#综合风险评级标准">5.3 综合风险评级标准
+<span>7</span></a></p>
+<p><a href="#测试工具">5.4 测试工具 <span>7</span></a></p>
+<p><a href="#修复建议说明">5.5 修复建议说明 <span>8</span></a></p>
+<p><a href="#致谢">6 致谢 <span>8</span></a></p>
+<p><a href="#_Toc10045">7 意见反馈 <span>8</span></a></p>
+<p><a href="#_Toc18846">8 了解更多 <span>9</span></a></p>
+<h1 class="unnumbered" id="摘要">摘要</h1>
+<p>应{{report_center}}邀请，深信服安全服务团队于{{ report_start_time
+}}至{{ report_end_time
+}}，对本单位部分系统进行了全面的渗透测试。测试手段主要通过模拟黑客攻击手法对{{report_systemname}}开展测试并发现安全隐患；本次安全测试共发现了{{vuls|length}}个安全漏洞，按漏洞风险分布为：高风险<strong>{{vuls|vul_statistics(3)}}</strong>个，中风险<strong>{{vuls|vul_statistics(2)}}</strong>个，低风险<strong>{{vuls|vul_statistics(1)}}</strong>个。</p>
+<p>深信服安全服务团队发现存在的安全漏洞主要为：{% set
+index_space=namespace(value=1) %}{% if vuls|vul_statistics(3) !=0 %}</p>
+<p>发现存在的<strong>高风险</strong>的安全漏洞主要为：{% for item in
+vuls %}{% if item.vul_level=='3'%}</p>
+<p>{{ index_space.value }}) {{report_systemname}}存在<strong>{{ item.
+vul_name}}</strong>漏洞的问题，{{ item.vul_desc}}。{%set
+index_space.value = index_space.value +1%}{% endif %}{% endfor %}{%
+endif %} {% set index_space=namespace(value=1) %}{% if
+vuls|vul_statistics(2) !=0 %}</p>
+<p>发现存在的<strong>中风险</strong>的安全漏洞主要为：{% for item in
+vuls %}{% if item.vul_level=='2'%}</p>
+<p>{{index_space.value }}) {{report_systemname}}存在<strong>{{ item.
+vul_name}}</strong>漏洞的问题，{{ item.vul_desc}}。{%set
+index_space.value=index_space.value+1%}{% endif %}{% endfor %}{% endif
+%} {% set index_space=namespace(value=1) %}{% if vuls|vul_statistics(1)
+!=0 %}</p>
+<p>发现存在的<strong>低风险</strong>的安全漏洞主要为：{% for item in
+vuls %}{% if item.vul_level=='1'%}</p>
+<p>{{index_space.value }}) {{report_systemname}}存在<strong>{{ item.
+vul_name}}</strong>漏洞的问题，{{ item.vul_desc}}。{%set
+index_space.value=index_space.value+1%}{% endif %}{% endfor %}{% endif
+%}</p>
+<p>本次渗透测试综合风险评分：<strong>{% if vuls|vul_statistics(3) !=0
+%}高{% elif vuls|vul_statistics(2)!=0 %}中{% elif
+vuls|vul_statistics(1)!=0 %}低{% endif
+%}</strong>风险，安全漏洞的详细情况及整改方法详见：第3章渗透测试漏洞详情。</p>
+<p>{% if vuls|vul_statistics(3) !=0
+%}<strong>从本次渗透测试结果来看，该系统在安全防护方面存在不足，难以抵御有组织的、高级别的安全攻击。</strong>{%
+endif %}</p>
+<p>建议{{report_center}}单位从以下三个方面进行安全整改，进一步提高网络安全防护和管理水平：</p>
+<p>在安全防护方面，建议完善安全基线并全面进行安全加固；加强办公终端管控，完善办公网络数据安全保护措施。</p>
+<p>在威胁发现方面，建议进一步加强APT攻击检测和威胁监测能力，加强日常安全检查力度，完善等级保护和风险评估机制，对安全加固和防护效果定期进行检查和评估，及时识别和消除风险。</p>
+<p>在安全管理方面，建议继续加强全体系信息安全工作的整体管理和组织协调，强化人员安全意识，严格落实各项规章制度，继续加强安全开发和上线前安全测试工作，不断提升运维管理水平。<strong><br />
+</strong></p>
+<h1 class="unnumbered" id="渗透测试说明">1渗透测试说明</h1>
+<h2 id="测试时间">测试时间</h2>
+<p>本次渗透测试按照事先约定规避风险的时间段开展，如下所示：</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 34%" />
+<col style="width: 20%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="4">测试工作时间段</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>开始时间</td>
+<td>{{ report_start_time }}</td>
+<td>结束时间</td>
+<td>{{ report_end_time }}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="测试人员">测试人员</h2>
+<p>本次渗透测试实施人员，如下所示：</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 24%" />
+<col style="width: 12%" />
+<col style="width: 25%" />
+<col style="width: 11%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="6">参测人员名单</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>姓名</td>
+<td>深信服安全服务团队</td>
+<td>测试IP</td>
+<td>-</td>
+<td>联系方式</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="测试范围与账户使用情况">测试范围与账户使用情况</h2>
+<p>本次渗透测试范围如下图所示：</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 23%" />
+<col style="width: 29%" />
+<col style="width: 16%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="5">渗透测试范围</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>编号</td>
+<td>应用系统名称</td>
+<td>应用系统URL/IP</td>
+<td>应用系统版本</td>
+<td>测试账号</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>{{report_systemname}}</td>
+<td>{{report_test_url}}</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><span id="_Toc1027510204" class="anchor"></span></p>
+<h1 id="问题总览">问题总览</h1>
+<h2 id="风险总览">风险总览</h2>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 41%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="3">风险总览</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>编号</td>
+<td>应用系统名称</td>
+<td>渗透结果</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>{{report_systemname}}</td>
+<td><p>高危{{vuls|vul_statistics(3)}}个</p>
+<p>中危{{vuls|vul_statistics(2)}}个</p>
+<p>低危{{vuls|vul_statistics(1)}}个</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="漏洞概况">漏洞概况</h2>
+<p>本次渗透测试发现的漏洞摘要如下表所示：</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 46%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="5">渗透测试漏洞清单</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>编号</td>
+<td>系统名称</td>
+<td>漏洞名称</td>
+<td>漏洞影响</td>
+<td>漏洞级别</td>
+</tr>
+<tr class="even">
+<td colspan="5">{%tr for item in vuls %}</td>
+</tr>
+<tr class="odd">
+<td>{{ loop.index }}</td>
+<td>{{report_systemname}}</td>
+<td>{{item. vul_name}}</td>
+<td>{{item.vul_desc}}</td>
+<td>{% if item. vul_level=='3'%}高{% elif item.vul_level=='2'%}中{% elif
+item.vul_level=='1' %}低{% endif %}</td>
+</tr>
+<tr class="even">
+<td colspan="5">{%tr endfor %}</td>
+</tr>
+</tbody>
+</table>
+<p>所有发现漏洞的详细说明和建议请参见第3章渗透测试漏洞详情。</p>
+<h1 id="渗透测试漏洞详情">渗透测试漏洞详情</h1>
+<h2 id="report_systemname-for-item-in-vuls"> {{report_systemname}}{% for
+item in vuls %} </h2>
+<h3 id="item.vul_name"> {{ item.vul_name}}</h3>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>漏洞级别</th>
+<th>{% if item.vul_level=='3'%}高{% elif item.vul_level=='2'%}中{% elif
+item.vul_level=='1' %}低{% endif %}</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>URL/IP</td>
+<td>{{ item.vul_url}}</td>
+</tr>
+<tr class="even">
+<td>漏洞及风险描述</td>
+<td>{{ item.vul_desc}}</td>
+</tr>
+<tr class="odd">
+<td colspan="2"><p>漏洞举证：</p>
+<p>{{item.vul_content}}</p></td>
+</tr>
+<tr class="even">
+<td>修复建议</td>
+<td>{{ item.vul_repair }}</td>
+</tr>
+</tbody>
+</table>
+<p>{% endfor %}</p>
+<h1 id="渗透测试依据和参考">渗透测试依据和参考</h1>
+<p>深信服科技将参考下列国内、国际及深信服科技制定的相关标准或规范指导渗透测试工作。</p>
+<p>国内标准、指南或规范：</p>
+<ul>
+<li><p>《计算机信息系统 安全保护等级划分准则》GB17859-1999</p></li>
+<li><p>《信息安全技术 信息安全风险评估规范》GB/T 20984-2007</p></li>
+<li><p>《信息安全技术 信息系统灾难恢复规范》GB/T 20988-2007</p></li>
+<li><p>《信息安全技术 安全漏洞等级划分指南》GB/T 30279-2020</p></li>
+<li><p>《信息安全技术 信息安全风险评估实施指南》GB/T 31509-2015</p></li>
+<li><p>《信息安全技术 网络安全等级保护实施指南》GB/T 25058-2019</p></li>
+<li><p>《信息安全技术 网络安全等级保护基本要求》GB/T 22239-2019</p></li>
+<li><p>《信息安全技术 网络安全等级保护测评要求》GB/T 28448-2019</p></li>
+</ul>
+<p>国际标准、指南或规范：</p>
+<ul>
+<li><p>《信息技术 安全技术 安全保证框架 第1部分：介绍和概念》ISO/IEC TR 15443-1:2012</p></li>
+<li><p>《信息技术 安全技术 安全保证框架 第2部分：分析》ISO/IEC TR 15443-2:2012</p></li>
+<li><p>《信息技术 安全技术 运行系统安全评估》ISO/IEC TR 19791:2010</p></li>
+<li><p>《信息技术 安全技术 信息安全风险管理》ISO/IEC 27005:2018</p></li>
+<li><p>OWASP OWASP_Testing_Guide_v4</p></li>
+<li><p>OWASP OWASP_Development_Guide_2005</p></li>
+<li><p>OWASP OWASP_Top_10_2021_Chinese</p></li>
+</ul>
+<p>深信服工作规范：</p>
+<ul>
+<li><p>深信服科技安全服务工作规范、渗透测试实施规范</p></li>
+</ul>
+<h1 id="渗透测试工作说明">渗透测试工作说明</h1>
+<h2 id="测试方法">测试方法</h2>
+<p>深信服安全服务团队的攻击和渗透方法是对测试范围内的资产进行全面，可重复和可审计的评估。这种测试方法通过模拟黑客入侵的方式识别Web应用程序相关的安全漏洞，并提供解决此类漏洞的建议。渗透测试通过以下七个步骤进行：</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>编号</th>
+<th>测试步骤</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>确定有关目标Web应用程序的详细信息</td>
+</tr>
+<tr class="even">
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>抓取目标Web应用程序并识别用户输入字段</td>
+</tr>
+<tr class="odd">
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>了解正在运行的应用程序和服务</td>
+</tr>
+<tr class="even">
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>识别应用程序/操作系统的漏洞</td>
+</tr>
+<tr class="odd">
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>验证漏洞，并且确定漏洞的风险</td>
+</tr>
+<tr class="even">
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>总结单个漏洞的风险和评级</td>
+</tr>
+<tr class="odd">
+<td><ol start="7" type="1">
+<li></li>
+</ol></td>
+<td>总结整体系统的风险评级</td>
+</tr>
+</tbody>
+</table>
+<h2 id="漏洞评级标准">漏洞评级标准</h2>
+<p>深信服安全服务团队的漏洞评级依照《信息安全技术-网络安全漏洞分类分级指南
+GB/T
+30279-2020》进行，从访问路径、触发要求、权限需求、交互条件、保密性影响程度、完整性影响程度、可用性影响程度七个维度进行技术赋值，按照标准要求计算出漏洞技术分级结果，共包含：超危、高危、中危、低危四个漏洞评级。</p>
+<p>漏洞评级详情请参考《信息安全技术-网络安全漏洞分类分级指南 GB/T
+30279-2020》。</p>
+<h2 id="综合风险评级标准">综合风险评级标准</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2">综合风险评级标准</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>风险级别</td>
+<td>说明</td>
+</tr>
+<tr class="even">
+<td>高风险</td>
+<td>存在1个及以上高危漏洞，或3个以上中危漏洞的系统</td>
+</tr>
+<tr class="odd">
+<td>中风险</td>
+<td>存在1个到3个中危漏洞，或5个以上低危漏洞的系统</td>
+</tr>
+<tr class="even">
+<td>低风险</td>
+<td>存在5个及以内低危漏洞，或未检测到漏洞的系统</td>
+</tr>
+</tbody>
+</table>
+<h2 id="测试工具">测试工具</h2>
+<p>我们的测试方法需要使用商业扫描工具和开源/免费软件渗透测试工具。用于测试的工具（包括且不限）如下所示：</p>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>名称</th>
+<th>功能</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="3">端口扫描工具</td>
+<td>TSS（自研）</td>
+<td><ol type="1">
+<li><p>网站WEB漏洞扫描</p></li>
+<li><p>主机系统漏洞扫描</p></li>
+<li><p>开放的端口扫描</p></li>
+<li><p>开放的服务识别</p></li>
+</ol></td>
+<td><ol type="1">
+<li><p>扫描并发现业务系统的WEB漏洞、主机漏洞；</p></li>
+<li><p>输出扫描报告，报告中包含业务系统的基本信息如IP地址、服务类型、漏洞描述、漏洞危害等。</p></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td>NMAP</td>
+<td rowspan="2"><ol type="1">
+<li><p>开放的端口扫描</p></li>
+<li><p>开放的服务识别</p></li>
+</ol></td>
+<td rowspan="2">检测服务器开放的端口与服务。</td>
+</tr>
+<tr class="odd">
+<td>Goby</td>
+</tr>
+<tr class="even">
+<td rowspan="3">域名资产分析工具</td>
+<td>Dig</td>
+<td rowspan="3">域名及资产发现搜集工具</td>
+<td
+rowspan="3">基础资产收集、互联网信息泄露搜集、指纹识别、业务系统功能收集、接口信息收集。</td>
+</tr>
+<tr class="odd">
+<td>Nslookup</td>
+</tr>
+<tr class="even">
+<td>北极星（自研）</td>
+</tr>
+<tr class="odd">
+<td rowspan="8">渗透工具</td>
+<td>Metasploit</td>
+<td>漏洞利用、溢出攻击</td>
+<td rowspan="8">进行漏洞利用、溢出攻击、暴力破解等渗透测试。</td>
+</tr>
+<tr class="even">
+<td>Kali</td>
+<td>渗透测试工具集</td>
+</tr>
+<tr class="odd">
+<td>SQLMAP</td>
+<td>SQL注入渗透测试</td>
+</tr>
+<tr class="even">
+<td>Burp Suite</td>
+<td>协议分析</td>
+</tr>
+<tr class="odd">
+<td>Tcpdump</td>
+<td>协议分析</td>
+</tr>
+<tr class="even">
+<td>Wireshark</td>
+<td>协议分析</td>
+</tr>
+<tr class="odd">
+<td>北极星（自研）</td>
+<td>应用缺陷分析及情报搜集</td>
+</tr>
+<tr class="even">
+<td>gorailgun（自研）</td>
+<td>应用缺陷分析</td>
+</tr>
+</tbody>
+</table>
+<p>备注：在实施渗透的过程中，深信服安全服务团队会根据业务系统场景的不同，使用符合场景的脚本用于自动化测试。</p>
+<h2 id="修复建议说明">修复建议说明</h2>
+<p>深信服在本文档中提供的各项修复建议均为基于漏洞的原理性分析修复方案或应用厂商提供的通用性方案，深信服无法完全了解系统研发详情，无法判断实际修复动作可能对业务造成的影响，对应建议仅供漏洞修复参考。</p>
+<p>深信服建议客户在测试环境中进行漏洞修复的验证工作或在修复前做好备份，避免修复过程中因非预期的问题导致业务受到影响。</p>
+<h1 id="致谢">致谢</h1>
+<p>深信服安全服务团队由衷感谢{{report_center}}相关部门与人员在渗透测试过程中进行沟通、协调的部门和人员，是你们的大力配合，使得我们的工作能够顺利完成。</p>
+<h1 id="意见反馈">意见反馈</h1>
+<p>请您点击下方链接或扫码进行服务评价以及意见反馈，您的宝贵意见将是我们改善工作的方向和服务的动力，我们定会认真对待，切实改进，在此对您的支持和帮助表示感谢！</p>
+<p>链接评价：<a
+href="https://www.wjx.cn/vm/YfrNigW.aspx"><u>https://www.wjx.cn/vm/YfrNigW.aspx</u></a></p>
+<p>二维码评价：</p>
+<p><img src="media/image4.png" style="width:2.25208in;height:2.27569in"
+alt="二维码评价" /></p>
+<p><span id="_Toc18846" class="anchor"></span></p>
+<h1 id="了解更多">了解更多</h1>
+<p>了解更多安全信息，或关于本文出现的漏洞、攻击方式等详细介绍与建议，可查看深信服安全中心的威胁维基或关注深信服科技公众号了解最新的安全情报。</p>
+<p>威胁维基：http://sec.sangfor.com.cn/vulns/lst.html</p>
+<p>公众号：</p>
+<p><img src="media/image5.png" style="width:1.87361in;height:2.27708in"
+alt="D:\Users\Sangfor\Desktop\官方微博.png官方微博" /><img
+src="media/image6.png" style="width:1.85in;height:2.24792in"
+alt="D:\Users\Sangfor\Desktop\公众号.png公众号" /></p>

@@ -1,0 +1,83 @@
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<div class="layui-tab layui-tab-card" lay-filter="test-hash">
+    <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="添加任务">① 添加任务</li>
+        <li lay-id="查看结果">② 查看结果</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form">
+                {% include 'public/tool_path.html' %}
+
+                {% include './public/url.html' %}
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">待执行命令</label>
+                    <div class="layui-input-block">
+                        <textarea name="shell" id="shell" placeholder="" class="layui-textarea"></textarea>
+                        <div class="layui-form-mid layui-word-aux">先点击[生成],可修改生成的命令,再点击[运行]</div>
+                    </div>
+                </div>
+                {% include 'public/button_group_new.html' %}
+                {% include 'public/help_document_new.html' %}
+
+
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for output in res.result_output_list %}
+                    <tr>
+                        <td><a href="/static/output/{{output}}" target="_blank">{{output}}</a></td>
+                        <td><a href="/static/output/{{output}}" target="_blank">查看</a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    //JS 
+    layui.use(['element', 'layer', 'util', "code"], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$
+            , form = layui.form;
+
+        //生成
+        form.on('submit(formDemo)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res['tool_name']}}/update",
+                data: JSON.stringify(data.field),
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    $("#shell").val(res.data);
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+
+
+    });
+</script>
+{% include "/public/footer.html" %}

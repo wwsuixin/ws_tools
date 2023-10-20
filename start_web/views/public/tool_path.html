@@ -1,0 +1,49 @@
+<div class="layui-form-item">
+    <label class="layui-form-label">工具路径</label>
+    <div class="layui-input-inline" style="width: 500px;">
+        {% if res['dir_path'] == "" %}
+        <div class="layui-input-inline">
+            <button type="button" class="layui-btn layui-btn-danger layui-btn-primary layui-border "
+                lay-on="tool_init">初始化(将解压deployment目录下{{res.tool_name}}.zip),完成后请刷新当前页面</button>
+        </div>
+        {% else %}
+        <input type="text" name="path" autocomplete="off" class="layui-input" disabled value="{{ res['path'] }}">
+        <div class="layui-form-mid layui-word-aux">项目地址:<a target="_blank"
+                href="{{res['down_url']|default('无')}}">{{res.down_url|default('无')}}</a></div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    layui.use(['util'], function () {
+        var util = layui.util;
+        var $ = layui.$;
+        util.on('lay-on', {
+            "tool_init": function (othis) {
+                $.ajax({
+                    type: "POST",
+                    url: "/{{res['tool_name']}}/tool_init",
+                    beforeSend: function () {
+                        layer.load(2);
+                        setTimeout(function () {
+                            layer.closeAll('loading');
+                        }, 120000);
+                    },
+                    success: function (res) {
+                        setTimeout(function () {
+                            layer.msg(res.msg);
+                            layer.closeAll('loading');
+                            parent.location.reload();
+                        }, 10000);
+                    },
+                    error: function (res) {
+                        layer.closeAll('loading');
+                        layer.msg('出现异常');
+                    }
+
+                })
+                return false;
+            }
+        });
+    });
+</script>

@@ -1,0 +1,539 @@
+{% include "/public/header.html" %}
+<style>
+    .select-input .select-input-input {
+        outline: none;
+        width: 100%;
+        height: 100%;
+        line-height: 100%;
+        border: 1px solid #17171a;
+        font-size: 14px;
+        border-radius: 2px;
+        cursor: pointer;
+        padding: 0 10px;
+        box-sizing: border-box;
+        background-color: var(--lay-color-fill-2);
+        color: var(--lay-color-text-2);
+        height: 38px;
+        line-height: 1.3;
+        line-height: 38px;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 2px;
+    }
+
+    .select-input .select-input-input:focus {
+        border-color: var(--lay-color-border-2) !important
+    }
+
+    .select-input .select-input-input:hover {
+        border-color: var(--lay-color-border-2) !important
+    }
+
+    .selectinput2 {
+        margin-bottom: 10px;
+    }
+</style>
+<form class="layui-form" action="" id="form_vul_info" lay-filter="form_vul_info" style="margin-top: 10px;">
+    <input type="hidden" name="report_id" id="report_id" value="{{res.data.id}}">
+    <fieldset class="layui-elem-field">
+        <legend>{{res.h1}}</legend>
+        <div class="layui-field-box">
+            <div class="layui-row">
+                <div class="layui-col-md4">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>项目信息</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg1">
+                                        <div id="report_center"></div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg2">
+                                        <div id="report_systemname"></div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg3">
+                                        <div class="select-input">
+                                            <div class="select-input-content">
+                                                <div class="select-input-container">
+                                                    <input class="select-input-input" name="report_test_url"
+                                                        id="report_test_url" autocomplete="off" placeholder="请输入访问地址"
+                                                        lay-filter="" lay-verify="" lay-vertype="" lay-reqtext="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="layui-col-md4">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>测试信息</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg1">
+                                        <div id="report_author"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="layui-col-md12" id="date-range">
+                                        <div class="grid-demo grid-demo-bg2">
+                                            <div class="select-input">
+                                                <div class="select-input-content">
+                                                    <div class="select-input-container">
+                                                        <input class="select-input-input" name="report_start_time"
+                                                            id="report_start_time" placeholder="请选择开始日期">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md12" id="date-range2">
+                                        <div class="grid-demo grid-demo-bg3">
+                                            <div class="select-input">
+                                                <div class="select-input-content">
+                                                    <div class="select-input-container">
+                                                        <input class="select-input-input" name="report_end_time"
+                                                            id="report_end_time" placeholder="请选择结束日期">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="layui-col-md4">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>漏洞信息</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg1">
+                                        <div id="vul_name"></div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg2">
+                                        <div class="select-input">
+                                            <div class="select-input-content">
+                                                <div class="select-input-container">
+                                                    <input type="text" name="vul_type_name" id="vul_type_name"
+                                                        placeholder="请选择或输入漏洞名称" , class="select-input-input"
+                                                        value="{{res.data.vul_type_name}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg3">
+                                        <div class="select-input">
+                                            <div class="select-input-content">
+                                                <div class="select-input-container">
+                                                    <select name="vul_level" lay-verify="required" lay-search>
+                                                        <option value=""></option>
+                                                        <option value="1" {% if res.data.vul_level=='1' %}selected{%
+                                                            endif %}>低危
+                                                        </option>
+                                                        <option value="2" {% if res.data.vul_level=='2' %}selected{%
+                                                            endif %}>中危
+                                                        </option>
+                                                        <option value="3" {% if res.data.vul_level=='3' %}selected{%
+                                                            endif %}>高危
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-row">
+                <div class="layui-col-md4">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>漏洞描述</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg2">
+                                        <textarea name="vul_desc" placeholder="请输入漏洞描述内容"
+                                            class="layui-textarea selectinput2">{{res.data.vul_desc}}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="layui-col-md4">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>修复建议</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg2">
+
+                                        <textarea name="vul_repair" placeholder="请输入修复建议内容"
+                                            class="layui-textarea selectinput2">{{res.data.vul_repair}}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="layui-col-md4">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>漏洞URL</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-col-md12">
+                                    <div class="grid-demo grid-demo-bg2">
+
+                                        <textarea name="vul_url" placeholder="请输入漏洞url"
+                                            class="layui-textarea selectinput2">{{res.data.vul_url}}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row">
+                <div class="layui-col-md10">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>复现过程</legend>
+                            <div class="layui-field-box">
+                                <div class="layui-col-xs12">
+
+                                    <textarea id="vul_content" name="vul_content"
+                                        placeholder="请输入复现内容">{{res.data.vul_content}}</textarea>
+
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="layui-col-md2">
+                    <div class="layui-row grid-demo">
+                        <fieldset class="layui-elem-field">
+                            <legend>操作按钮</legend>
+                            <div class="layui-field-box">
+                                <button class="layui-btn  layui-btn-primary layui-border layui-border-green" lay-submit
+                                    lay-filter="formDemo" type="button">立即提交</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<script src="{{ url_for('static', filename='tinymce/tinymce.min.js') }}"></script>
+<script>
+    tinymce.init({
+        selector: '#vul_content',
+        height: 800,
+        language_url: '/static/tinymce/languages/zh_CN.js',
+        language: 'zh_CN',//汉化，注意大小写
+        content_style: "img {max-width:80%;}",
+        skin: 'oxide-dark',//主题
+        content_css: 'dark',
+        statusbar: false,//隐藏状态栏
+        toolbar: 'code undo redo restoredraft |image tpImportword blockquote | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent |styleselect formatselect fontselect fontsizeselect | bullist numlist | table  media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs',
+        plugins: "paste tpImportword image",
+        paste_data_images: true,
+        // images_upload_url: 'api/upload',
+
+        fontsize_formats: '12px 14px 16px 18px 24px 36px 48px 56px 72px',
+        font_formats: '微软雅黑=Microsoft YaHei,Helvetica Neue,PingFang SC,sans-serif;苹果苹方=PingFang SC,Microsoft YaHei,sans-serif;宋体=simsun,serif;仿宋体=FangSong,serif;黑体=SimHei,sans-serif;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;',
+        setup: function (editor) {
+            editor.on('change', function () { editor.save(); });
+        },
+        images_upload_handler: function (blobInfo, success, failure, progress) {
+            var xhr, formData;
+            xhr = new XMLHttpRequest();
+            xhr.withCredentials = false;
+            xhr.open('POST', 'api/upload');
+
+            xhr.upload.onprogress = function (e) {
+                progress(e.loaded / e.total * 100);
+            }
+
+            xhr.onload = function () {
+                var json;
+                if (xhr.status == 403) {
+                    failure('HTTP Error: ' + xhr.status, { remove: true });
+                    return;
+                }
+                if (xhr.status < 200 || xhr.status >= 300) {
+                    failure('HTTP Error: ' + xhr.status);
+                    return;
+                }
+                json = JSON.parse(xhr.responseText);
+                if (!json || typeof json.location != 'string') {
+                    failure('Invalid JSON: ' + xhr.responseText);
+                    return;
+                }
+                success(json.location);
+            };
+
+            xhr.onerror = function () {
+                failure('Image upload failed due to a XHR Transport error. Code: ' + xhr.status);
+            }
+
+            formData = new FormData();
+            formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+            xhr.send(formData);
+        }
+
+    });
+</script>
+
+<script>
+    //Demo
+    layui.extend({ selectInput: "{{ url_for('static', filename='js/selectInput2') }}" });
+    // 
+    layui.use(['form', 'laydate', 'selectInput'], function () {
+        var form = layui.form;
+        var laydate = layui.laydate;
+        var selectInput = layui.selectInput;
+        var jq = layui.jquery;
+
+        //渲染所属项目下拉框
+        var selectinput_report_center = selectInput.render({
+            elem: "#report_center",
+            name: "report_center",
+            id: "report_center",
+            url: "api",
+            params: {
+                action: "report_center"
+            },
+            localSearch: true,
+            clickClose: true,
+            hasSelectIcon: true,
+            ignoreCase: true,
+            initValue: "{{res.data.report_center}}", // 渲染初始化默认值
+            placeholder: "请选择或输入项目名称",
+            //通过选择下拉框渲染所属项目相关的系统下拉框
+
+            onClick: function (res) {
+                // console.log(res.value)
+                jq.ajax({
+                    url: "api",
+                    data: {
+                        action: "report_systemname",
+                        report_center: res.value
+                    },
+                    dataType: "json",
+                    type: "POST",
+                    success: function (res) {
+                        data = res.data
+                        selectinput_report_systemname.append(data, false)
+                    }
+                })
+
+            }
+        })
+        //渲染所属系统下拉框
+        var selectinput_report_systemname = selectInput.render({
+            elem: "#report_systemname",
+            name: "report_systemname",
+            id: "report_systemname",
+            localSearch: true,
+            hasSelectIcon: true,
+            ignoreCase: true,
+            clickClose: true,
+            placeholder: "请选择或输入系统名称",
+            initValue: "{{res.data.report_systemname}}", // 渲染初始化默认值
+            // 通过点击获取所属系统漏洞数据
+            onClick: function (res) {
+                var report_info = form.val("report_info");
+                // 获取访问地址
+                jq.ajax({
+                    url: "api",
+                    data: {
+                        action: "report_test_url",
+                        report_center: selectinput_report_center.getValue(),
+                        report_systemname: res.value
+                    },
+                    dataType: "json",
+                    type: "GET",
+                    success: function (res) {
+                        data = res.data
+                        // selectinput_report_test_url.append(data['report_test_url'], false)
+                        selectinput_report_author.append(data['report_author'], false)
+                        jq("#report_test_url").val(data["report_test_url"][0]['name'])
+                        jq("#report_author").val(data["report_author"])
+                        // jq("#report_test_url").val(data["report_test_url"])
+                        jq("#report_start_time").val(data["report_start_time"])
+                        jq("#report_end_time").val(data["report_end_time"])
+                    }
+                })
+            }
+        })
+        //渲染 【访问地址】
+        // var selectinput_report_test_url = selectInput.render({
+        //     elem: "#report_test_url",
+        //     name: "report_test_url",
+        //     id: "report_test_url",
+        //     localSearch: true,
+        //     ignoreCase: true,
+        //     hasSelectIcon: true,
+        //     placeholder: "请选择或输入访问地址",
+        //     clickClose: true,
+        //     initValue: "{{res.data.report_test_url}}", // 渲染初始化默认值
+
+        // })
+        //渲染测试人员下拉框
+        var selectinput_report_author = selectInput.render({
+            elem: "#report_author",
+            name: "report_author",
+            id: "report_author",
+            localSearch: true,
+            ignoreCase: true,
+            hasSelectIcon: true,
+            placeholder: "请选择或输入测试人员",
+            clickClose: true,
+            initValue: "{{res.data.report_author}}", // 渲染初始化默认值
+
+            // 通过点击获取所属系统漏洞数据
+        })
+
+        //渲染[漏洞类型]下拉框
+        // var selectinput_vul_type_name = selectInput.render({
+        //     elem: "#vul_type_name",
+        //     name: "vul_type_name",
+        //     url: "api",
+        //     params: {
+        //         action: "vul_type_name"
+        //     },
+        //     localSearch: true,
+        //     clickClose: true,
+        // ignoreCase:true,
+        //     hasSelectIcon: true,
+        //     initValue: "{{res.data.vul_type_name}}", // 渲染初始化默认值
+        //     通过选择下拉框渲染[漏洞名称]下拉框
+        //     onClick: function (res) {
+        //         // console.log(res.value)
+        //         jq.ajax({
+        //             url: "api",
+        //             data: {
+        //                 action: "vul_name",
+        //                 vul_type_name: res.value
+        //             },
+        //             dataType: "json",
+        //             type: "GET",
+        //             success: function (res) {
+        //                 data = res.data
+        //                 selectinput_vul_name.append(data, false)
+        //             }
+        //         })
+        //     }
+        // })
+
+        //渲染[漏洞信息]数据
+        var selectinput_vul_name = selectInput.render({
+            elem: "#vul_name",
+            name: "vul_name",
+            id: "vul_name",
+            localSearch: true,
+            hasSelectIcon: true,
+            ignoreCase: true,
+            clickClose: true,
+            placeholder: "请选择或输入漏洞名称",
+            url: "api",
+            initValue: "{{res.data.vul_name}}", // 渲染初始化默认值
+
+            params: {
+                action: "vul_name"
+            },
+            // 通过点击获取所属系统漏洞数据
+            onClick: function (res) {
+                jq.ajax({
+                    url: "api",
+                    data: {
+                        action: "vul_info",
+                        vul_name: res.value
+                    },
+                    dataType: "json",
+                    type: "GET",
+                    success: function (res) {
+                        data = res.data[0]
+                        form.val("form_vul_info", {
+                            "vul_type_name": data['vul_type_name'],
+                            "vul_level": data['vul_level'],
+                            "vul_desc": data['vul_desc'],
+                            "vul_repair": data['vul_repair'],
+                        });
+                    }
+                })
+
+            }
+        })
+        // 渲染开始时间组件
+        laydate.render({
+            elem: '#date-range', //开始时间和结束时间所在 input 框的父选择器
+            //设置开始日期、日期日期的 input 选择器
+            range: ['#report_start_time', '#report_end_time'],//数组格式为 layui 2.6.6 开始新增
+            rangeLinked: true,// 开启日期范围选择时的区间联动标注模式 ---  2.8+ 新增
+            value: "{% if res.data.id  %}{{res.data.report_start_time}} - {{res.data.report_end_time}}{%else%}{% endif %}",
+            isInitValue: "{% if res.data.id  %}true{%else%}false{% endif %}",
+        });
+        // 渲染结束时间组件
+        laydate.render({
+            elem: '#date-range2', //开始时间和结束时间所在 input 框的父选择器
+            //设置开始日期、日期日期的 input 选择器
+            range: ['#report_start_time', '#report_end_time'],//数组格式为 layui 2.6.6 开始新增
+            rangeLinked: true,// 开启日期范围选择时的区间联动标注模式 ---  2.8+ 新增
+            value: "{% if res.data.id  %}{{res.data.report_start_time}} - {{res.data.report_end_time}}{%else%}{% endif %}",
+            isInitValue: "{% if res.data.id  %}true{%else%}false{% endif %}",
+        });
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            var submit_data = data.field
+            submit_data['action'] = "save"
+            layer.confirm('确认是否提交？', { icon: 3 }, function () {
+                // layer.msg('点击确定的回调', { icon: 1 });
+                jq.ajax({
+                    url: "api",
+                    data: submit_data,
+                    dataType: "json",
+                    type: "POST",
+                    success: function (res) {
+                        var icon = 2;
+                        if (res.code === 0) {
+                            icon = 1;
+                        }
+
+                        layer.alert(res.msg, {
+                            icon: icon,
+                            shadeClose: true,
+                            // title: 'icon: ' + icon
+                        })
+                    }
+                })
+
+            }, function () {
+                // layer.msg('点击取消的回调');
+            });
+
+            return false;
+        });
+    });
+</script>
+</body>
+
+</html>

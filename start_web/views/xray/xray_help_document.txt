@@ -1,0 +1,4 @@
+开启监听，被动扫描：--listen 127.0.0.1:1111
+爬虫
+webscan  --basic-crawler [url]       use a basic spider to crawl the target and scan the requests
+webscan  --browser-crawler [url]       use a browser spider to crawl the target and scan the requests

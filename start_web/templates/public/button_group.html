@@ -1,0 +1,16 @@
+<button class="layui-btn  layui-btn-radius   layui-btn-normal" lay-submit lay-filter="formRun">
+    运行</button>
+<!-- 打开工具路径 -->
+{% if res['dir_path'] != null %}
+<input type="text" name="dir_path" autocomplete="off" class="layui-input" style="display:none"
+    value="{{ res['dir_path'] }}">
+<button class="layui-btn  layui-btn-radius " lay-submit lay-filter="formOpen">
+    打开工具路径</button>
+{% endif %}
+<!-- 打开结果路径 -->
+{% if res['result_path'] != null %}
+<input type="text" name="result_path" autocomplete="off" class="layui-input" style="display:none"
+    value="{{ res['result_path']|default() }}">
+<button class="layui-btn  layui-btn-radius " lay-submit lay-filter="formOpen_res">
+    打开结果路径</button>
+{% endif %}

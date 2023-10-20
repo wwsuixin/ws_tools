@@ -1,0 +1,27 @@
+
+在线poc编写：https://poc.xray.cool/
+--------------------------------------------------
+  --run value, -r value      执行指定插件 多个插件间','分割 支持glob语法 用于测试插件或过滤插件
+------------------------------------------------------
+COMMANDS:
+  list         列出插件
+  pull         下载及更新插件
+  upgrade, up  升级到最新版本
+  add          将文件添加到插件仓库
+  help, h      Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+  -v                         列出启用的插件 <list-enable> (default: false)
+  -o value [ -o value ]      结果输出: 指定保存结果的文件路径 <result-printer>
+  -i value                   目标文件: 指定含有扫描目标的文本文件 <util-target-split>
+  -t value                   扫描目标: 可以为URL/IP/域名/Host:Port等多种形式的混合输入 <util-target-split>
+  --bw value                 最大带宽占用限制(KB/s): 限制扫描发包的最大速率 与PPS的换算关系为: PPS=带宽*1024/60 <info-live> (default: 2000)
+  --Pn                       禁用主机存活探测: 端口扫描之前不进行主机存活探测 <info-live> (default: false)
+  -p value                   需要探测的TCP端口 <info-live>
+
+  --enable value, -e value   在默认策略（全量探测）基础上增加本地插件，支持glob语法
+  --disable value, -d value  禁用部分插件，支持glob语法
+  --config value, -c value   指定配置文件
+  --debug                    debug (default: false)
+  --quiet, -q                不显示banner (default: false)
+  --help, -h                 show help (default: false)

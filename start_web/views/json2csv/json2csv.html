@@ -1,0 +1,53 @@
+
+{% include "/public/header.html" %}
+<h1>{{res.h1}}</h1>
+<hr class="layui-border-blue">
+<form class="layui-form">
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">待处理文本</label>
+        <div class="layui-input-block">
+            <textarea name="data" id="data" placeholder="" class="layui-textarea" rows="30">[{"a":1,"b":2}]</textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn  layui-btn-primary layui-border layui-border-green    layui-btn-normal" lay-submit lay-filter="formRun"> 处理</button>
+        </div>
+    </div>
+
+    <div class="layui-form-mid layui-word-aux">
+        转换结果将被写入 <a target="_blank" href="/static/output/{{res.tool_name}}.csv">json2csv.csv(点击查看)</a> 中
+    </div>
+    
+</form>
+
+
+<script>
+    //JS 
+    layui.use(['element', 'layer',], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.$
+            , form = layui.form;
+
+        // 运行
+        form.on('submit(formRun)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: "/{{res.tool_name}}/update",
+                data: JSON.stringify(data.field),
+                // data: { "shell": data.field['shell'] },
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    $("#format_data").val(res.data);
+                    layer.msg(res.msg);
+                }
+            })
+            return false;
+        });
+
+    });
+</script>
+{% include "/public/footer.html" %}

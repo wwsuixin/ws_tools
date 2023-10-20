@@ -1,0 +1,341 @@
+{% include "/public/header.html" %}
+
+<div class="layui-field-box">
+	<div class="layui-row">
+		<!-- 信息收集 -->
+		<div class="layui-col-sm12">
+			<div class="grid-demo grid-demo-bg1">
+				<fieldset class="layui-elem-field">
+					<legend>信息收集</legend>
+					<div class="layui-field-box">
+						<div class="layui-col-sm2">
+							<fieldset class="layui-elem-field">
+								<legend>单位名称</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border "
+											id="enscan">企业信息收集</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border  "
+											id="edu_ip_search">教育网IP段查询</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-sm4">
+							<fieldset class="layui-elem-field">
+								<legend>域名、IP</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border "
+											id="fofamap">fofamap</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border "
+											id="fofaviewer">Fofa客户端</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border "
+											id="ip2domain">Ip查询[域名、权重、备案]</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border "
+											id="ip_attribution">Ip查询[归属地]</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-sm2">
+							<fieldset class="layui-elem-field">
+								<legend>指纹识别</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-green "
+											id="finger">finger</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-sm2">
+							<fieldset class="layui-elem-field">
+								<legend>抓包工具</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-green "
+											id="burpsuite">burpsuite</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-green "
+											id="Sunny">Sunny-小程序</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!-- 漏洞扫描 -->
+		<div class="layui-col-sm12">
+			<div class="grid-demo">
+				<fieldset class="layui-elem-field">
+					<legend>漏洞扫描</legend>
+					<div class="layui-field-box">
+						<div class="layui-col-xs4">
+							<fieldset class="layui-elem-field">
+								<legend>目录扫描</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange"
+											id="dirsearch">dirsearch</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange"
+											id="PackerFuzzer">PackerFuzzer</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange"
+											id="urlfinder">url收集</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange"
+											id="bbscan">网站敏感信息扫描</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange"
+											id="ihoneyBakFileScan_Modify">网站备份文件扫描</button>
+										<!-- <button type="button"
+												class="layui-btn  layui-btn-primary layui-border-orange "
+												id="info">备份文件扫描</button> -->
+
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs4">
+							<fieldset class="layui-elem-field">
+								<legend>综合扫描</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="xray">xray</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="xpoc">xpoc</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="nuclei">nuclei</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="tidefinger">tidefinger</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="gorailgun">gorailgun</button>
+
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs4">
+							<fieldset class="layui-elem-field">
+								<legend>框架扫描</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="thinkphp">thinkphp</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="weblogic">weblogic</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="wxapp">小程序反编译</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="oa_dirpath">OA</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-orange "
+											id="shiro_dirpath">Shiro</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+
+		<!-- 漏洞利用 -->
+		<div class="layui-col-sm12">
+			<div class="grid-demo">
+				<fieldset class="layui-elem-field">
+					<legend>漏洞利用</legend>
+					<div class="layui-field-box">
+						<div class="layui-col-xs4">
+							<fieldset class="layui-elem-field">
+								<legend>数据库利用</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="sqlmap">sqlmap</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="dbeaver">dbeaver</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="redis">redis</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="mdut">MDUT</button>
+
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs3">
+							<fieldset class="layui-elem-field">
+								<legend>webshell连接</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red  "
+											id="antsword">antsword</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="behinder">behinder</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="godzilla">godzilla</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs5">
+							<fieldset class="layui-elem-field">
+								<legend>框架利用</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="dumpall">.git/.svn/.DS_Store利用</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red"
+											id="nacosleak">Nacos</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red"
+											id="heapdump">heapdump</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-green"
+											id="reverse_shell_generator">反弹shell</button>
+									</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs2">
+
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!-- 数据处理 -->
+		<div class="layui-col-sm12">
+			<div class="grid-demo">
+				<fieldset class="layui-elem-field">
+					<legend>数据处理</legend>
+					<div class="layui-field-box">
+						<div class="layui-col-xs6">
+							<fieldset class="layui-elem-field">
+								<legend>综合</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="format_string">URL处理</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="ip_create">掩码转IP</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="re_tool">正则-同类数据提取</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="ak_search">正则-敏感数据提取</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs6">
+							<fieldset class="layui-elem-field">
+								<legend>字典</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue  "
+											id="dict_create">md5碰撞-多个</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="SocialEngineeringDictionaryGenerator">字典生成-个人</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="default_user_pass_dict">默认用户密码查询</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!-- 内网渗透 -->
+		<div class="layui-col-sm12">
+			<div class="grid-demo">
+				<fieldset class="layui-elem-field">
+					<legend>内网渗透</legend>
+					<div class="layui-field-box">
+						<div class="layui-col-xs6">
+							<fieldset class="layui-elem-field">
+								<legend>内网资产</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-purple "
+											id="avcheck">进程识别</button>
+
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs6">
+							<fieldset class="layui-elem-field">
+								<legend>内网横向</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-purple  "
+											id="fscan_analysis">fscan结果分析</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-purple "
+											id="server_login">服务登录验证</button>
+
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!-- 系统工具 -->
+		<div class="layui-col-sm12">
+			<div class="grid-demo">
+				<fieldset class=" layui-elem-field">
+					<legend>系统工具</legend>
+					<div class="layui-field-box">
+						<div class="layui-col-xs6">
+							<fieldset class="layui-elem-field">
+								<legend>代理</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue   "
+											id="ProxyPoolxSocks">socks代理</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="fastgithub">fastgithub</button>
+
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="layui-col-xs6">
+							<fieldset class="layui-elem-field">
+								<legend>综合</legend>
+								<div class="layui-field-box">
+									<div class="layui-btn-container">
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="exec">系统命令执行</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="clean">痕迹清理</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-red "
+											id="MobaXterm">MobaXterm</button>
+										<button type="button" class="layui-btn  layui-btn-primary layui-border-blue "
+											id="test">test</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="layui-col-sm12">
+			<div class="grid-demo">
+
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	layui.use(function () {
+		var $ = layui.$;
+		$('.layui-btn').click(function () {
+			var id = $(this).attr('id');
+			window.location.href = "/" + id + "/";
+		});
+
+	});
+
+</script>
+{% include "/public/footer.html" %}

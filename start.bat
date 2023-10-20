@@ -8,7 +8,7 @@ if not exist tmp (
 if not exist env\python311\python311.exe (
     echo python311依赖环境不存在,开始下载python311.zip
     if not exist tmp\python311.zip (
-        curl -L https://git.xfj0.cn/https://github.com/test7911/deployment/releases/download/env/python311.zip -o tmp\python311.zip
+        curl -L https://git.xfj0.cn/https://github.com/wwsuixin/ws_tools/releases/download/202310201112/python311.zip -o tmp\python311.zip
         
         if %errorlevel% neq 0 (
             echo 下载异常，请检查网络问题
@@ -27,7 +27,7 @@ if not exist env\python311\python311.exe (
 if not exist env\PowerShell\pwsh.exe (
     echo PowerShell依赖环境不存在,开始下载PowerShell.zip
     if not exist tmp\PowerShell.zip (
-        curl -L https://git.xfj0.cn/https://github.com/test7911/deployment/releases/download/env/PowerShell.zip -o tmp\PowerShell.zip
+        curl -L https://git.xfj0.cn/https://github.com/wwsuixin/ws_tools/releases/download/202310201112/PowerShell.zip -o tmp\PowerShell.zip
         if %errorlevel% neq 0 (
             echo 下载异常，请检查网络问题
             del tmp\PowerShell.zip
@@ -44,7 +44,7 @@ if not exist env\PowerShell\pwsh.exe (
 if not exist env\java1.8\java.exe (
     echo java1.8依赖环境不存在,开始下载java1.8.zip
     if not exist tmp\java1.8.zip (
-        curl -L https://git.xfj0.cn/https://github.com/test7911/deployment/releases/download/202310201038/jre1.8.zip -o tmp\java1.8.zip
+        curl -L https://git.xfj0.cn/https://github.com/wwsuixin/ws_tools/releases/download/202310201112/jre1.8.zip -o tmp\java1.8.zip
         if %errorlevel% neq 0 (
             echo 下载异常，请检查网络问题
             del tmp\java1.8.zip
@@ -62,7 +62,7 @@ if not exist env\java1.8\java.exe (
 if not exist env\java17\java.exe (
     echo java17依赖环境不存在,开始下载java17.zip
     if not exist tmp\java17.zip (
-        curl -L https://git.xfj0.cn/https://github.com/test7911/deployment/releases/download/202310201038/jre17.zip -o tmp\java17.zip
+        curl -L https://git.xfj0.cn/https://github.com/wwsuixin/ws_tools/releases/download/202310201112/jre17.zip -o tmp\java17.zip
         if %errorlevel% neq 0 (
             echo 下载异常，请检查网络问题
             del tmp\java17.zip
@@ -74,6 +74,23 @@ if not exist env\java17\java.exe (
         echo 解压java17.zip
         env\bandizip\Bandizip.x64.exe x -target:auto -o:env tmp\java17.zip
         del tmp\java17.zip
+    )
+)
+if not exist env\PortableGit\bin\git.exe (
+    echo git依赖环境不存在,开始下载PortableGit.zip
+    if not exist tmp\PortableGit.zip (
+        curl -L https://git.xfj0.cn/https://github.com/wwsuixin/ws_tools/releases/download/202310201112/PortableGit.zip -o tmp\PortableGit.zip
+        if %errorlevel% neq 0 (
+            echo 下载异常，请检查网络问题
+            del tmp\PortableGit.zip
+            pause
+            exit /b 1
+        )
+    )
+    if exist tmp\PortableGit.zip (
+        echo 解压PortableGit.zip
+        env\bandizip\Bandizip.x64.exe x -target:auto -o:env tmp\PortableGit.zip
+        del tmp\PortableGit.zip
     )
 )
 

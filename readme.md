@@ -10,11 +10,18 @@
 
 # 安装说明
 
-1.  源码打包下载后运行**start.bat**即可
+1. 源码打包下载后运行**start.bat**即可
 2. bat文件将自动下载python311、java1.8、Java17、git等依赖环境
 3. bat文件将自动安装pdm及其所使用到的依赖包
 4. 所有环境安装完成后将开启60001服务端口并自动使用默认浏览器打开**http://127.0.0.1:60001**
 
+# 常见问题
+- 问题：默认内置版本为python3.11
+	- 解答：不支持win10以下版本
+- 问题：安装python依赖环境遇到报错：` Microsoft Visual C++ 14.0 or greater is required`
+	- 解答：参考文章：https://zhuanlan.zhihu.com/p/471661231
+1. 
+2. 
 
 # 功能展示
 

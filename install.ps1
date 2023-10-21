@@ -3,6 +3,9 @@ if (-not (Test-Path -Path "tmp")) {
     New-Item -ItemType Directory -Path "tmp"
 }
 
+
+
+
 if (-not (Test-Path -Path "env\python311\python311.exe")) {
     Write-Host "python311依赖环境不存在,开始下载python311.zip"
     if (-not (Test-Path -Path "tmp\python311.zip")) {
@@ -115,11 +118,22 @@ if (-not (Test-Path -Path "env\PortableGit\bin\git.exe")) {
 if (-not (Test-Path -Path ".venv\Scripts\python.exe")) {
     Write-Host "安装python依赖环境"
     Start-Process -FilePath "env\Python311\python311.exe" -ArgumentList "-m pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/"
-    Start-Process -FilePath "env\Python311\python311.exe" -ArgumentList "-m pip install pdm"
-    Start-Process -FilePath "env\Python311\python311.exe" -ArgumentList "-m pdm config pypi.url https://mirrors.aliyun.com/pypi/simple/"
-    Start-Process -FilePath "env\Python311\python311.exe" -ArgumentList "-m pdm install"
-    $process = Get-Process -Name "python311.exe"
+    $process = Start-Process -FilePath "env\Python311\python311.exe" -ArgumentList "-m pip install pdm" -PassThru
     $process.WaitForExit()
+    if ($process.ExitCode -ne 0) {
+        Write-Host "pdm安装失败"
+        Read-Host -Prompt "按Enter键退出"
+        exit 1
+    }
+    Start-Process -FilePath "env\Python311\python311.exe" -ArgumentList "-m pdm config pypi.url https://mirrors.aliyun.com/pypi/simple/"
+    $process = Start-Process -FilePath "env\Python311\python311.exe" -ArgumentList "-m pdm install" -PassThru
+    $process.WaitForExit()
+    if ($process.ExitCode -ne 0) {
+        Write-Host "pdm install命令执行失败"
+        Read-Host -Prompt "按Enter键退出"
+        exit 1
+    }
+
 }
 
     Write-Host "安装完成，请重新运行start.bat"

@@ -16,14 +16,13 @@
                         <div id="report_systemname"></div>
                     </div>
                 </div>
-                <div class="layui-inline">
+                <!-- <div class="layui-inline">
                     <label class="layui-form-label">访问地址</label>
                     <div class="layui-input-block">
-                        <!-- <div id="report_test_url"></div> -->
                         <input type="text" name="report_test_url" id="report_test_url" class="layui-input"
                             style="width: 300px;">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </form>
@@ -32,7 +31,7 @@
 ">
         ① 如需要导出整个项目请保持【系统名称】为空，导出单个系统报告，则必须选择对应【系统名称】<br>
         ② 为防止数据泄露,建议确认报告无误及时清理项目数据<br>
-        ③ 图片不清晰是因为从word中复制出来所导致，请在【添加漏洞】时使用编辑器的【导入word】功能，第二行第四个图标
+        ③ 图片不清晰是因为从word中复制出来所导致，请在【添加漏洞】时使用编辑器的【导入word】功能，第二行第四个图标<br>
         ④ 首次导出失败,通常是因为当前运行环境缺少office或pandoc程序,请查看readme.pdf进行安装
     </blockquote>
     <div class="layui-card-body">
@@ -123,6 +122,7 @@
                     type: "GET",
                     success: function (res) {
                         data = res.data
+                        console.log(data)
                         // selectinput_report_test_url.append(data['report_test_url'], false)
                         // selectinput_report_author.append(data['report_author'], false)
 

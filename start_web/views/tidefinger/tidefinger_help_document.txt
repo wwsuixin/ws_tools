@@ -1,5 +1,0 @@
-默认支持url,如需针对IP进行扫描,请生成命令后修改-uf为-hf
-常用示例：
-TideFinger -h 192.0.0.1/24 -p 80 -np -nobr -nopoc       探测C段开放80端口的服务指纹，不使用ping，不 暴力破解，不检测poc
-TideFinger -u http://www.tidesec.com -pd                探测指定url的指纹，检测poc，并显示poc的详细 数据
-TideFinger -uf url.txt -nobr -nopoc -pt 120             探测指定url文件的指纹，每个服务指纹超时为120秒

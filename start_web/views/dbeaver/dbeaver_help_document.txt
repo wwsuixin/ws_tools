@@ -1,2 +1,0 @@
-1.【窗口】-【首选项】-【连接】-【驱动】-【驱动位置】-【本地文件夹：.\drivers】
-2.【窗口】-【首选项】-【连接】-【驱动】-【Maven】-【仓库】-【添加：http://maven.aliyun.com/nexus/content/groups/public/】-【向上：到最上面】

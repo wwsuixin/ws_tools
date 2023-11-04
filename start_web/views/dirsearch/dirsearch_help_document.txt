@@ -1,5 +1,0 @@
-# 常用字典
---cookie=COOKIE  #登录后进行爆破
- --exclude-sizes=SIZES  排除响应包大小
- -e EXTENSIONS, --extensions=EXTENSIONS 指定后缀(e.g. php,asp)
---wordlist="C:\Users\Public\ws_tools\other\dicts\diy_dict.txt" ###只使用自定义字典

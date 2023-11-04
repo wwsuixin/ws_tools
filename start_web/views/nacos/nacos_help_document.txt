@@ -1,6 +1,0 @@
-  -p string
-        password
-  -u string
-        username
-  -url string
-        url

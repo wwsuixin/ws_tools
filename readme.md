@@ -20,10 +20,9 @@
 	- 解答：不支持win10以下版本
 - 问题：安装python依赖环境遇到报错：` Microsoft Visual C++ 14.0 or greater is required`
 	- 解答：参考文章：https://zhuanlan.zhihu.com/p/471661231
-1. 
-2. 
 
-# 功能展示
+
+# 功能展示（部分功能还在调试中）
 
 -   工具首页，包含原创工具，如【报告平台、md5碰撞、fscan结果分析及验证、正则提取】等
 

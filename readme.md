@@ -25,14 +25,17 @@ cd /d %~dp0
 @REM 设置代理url
 set http_proxy=https://gh.con.sh
 
-
 if not exist run.ps1 (
     echo [-]检测到当前环境还未安装, 开始下载运行脚本
     powershell -ExecutionPolicy Bypass -Command "& {iwr -useb !http_proxy!/https://github.com/wwsuixin/ws_tools/raw/main/run.ps1 -OutFile run.ps1}"
-
-) else (
-    powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
 )
+if not exist run.ps1 (
+    echo [-]网络环境异常,请检查网络......
+    pause
+    exit
+)
+powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
+
 
 ```
 

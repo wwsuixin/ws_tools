@@ -40,9 +40,7 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
                 (New-Object System.Net.WebClient).DownloadFile($URL, $tmp_tool_file_path)
             }
             else {
-                Start-Process -FilePath "env\aria2c\aria2c.exe" -ArgumentList "-x 16 -s 16 -k 1M -o $tmp_tool_file_path $URL"
-                $process = Get-Process -Name "aria2c"
-                $process.WaitForExit()
+                Start-Process -FilePath "env\aria2c\aria2c.exe" -ArgumentList "-x 16 -s 16 -k 1M -o $tmp_tool_file_path $URL"  -NoNewWindow -Wait
             }
             
             #判断文件不存在或大小为0KB
@@ -65,13 +63,13 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
         }
         else {
             if ($tool_name -eq "start_web") {
-                Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -o:./ $tmp_tool_file_path"
+                Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -o:./ $tmp_tool_file_path"  -NoNewWindow -Wait
             }
             elseif ($tool_name -eq "venv") {
-                Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -o:./.venv $tmp_tool_file_path"
+                Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -o:./.venv $tmp_tool_file_path"  -NoNewWindow -Wait
             }
             else {
-                Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -target:auto -o:$env_dir_path $tmp_tool_file_path"
+                Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -target:auto -o:$env_dir_path $tmp_tool_file_path"  -NoNewWindow -Wait
             }
             $process = Get-Process -Name "bandizip"
             $process.WaitForExit()
@@ -90,6 +88,10 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
 
 }
 
+Write-Host "[+] 开始检测运行环境......"
+
+
+
 InstallTool "aria2c" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "bandizip" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "python311" $tmp_dir_path $env_dir_path $http_proxy
@@ -100,5 +102,24 @@ InstallTool "jdk17" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "start_web" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "venv" $tmp_dir_path $env_dir_path $http_proxy
 
-Start-Process -FilePath "chrome" -ArgumentList "http://127.0.0.1:60001"
-Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "start_web", "run",  "--host", "0.0.0.0", "--port", "60001"
+$current_path = Get-Location
+
+
+$pyvenv_file_path = "$current_path/.venv/pyvenv.cfg"
+$pyvenv_data = @"
+home = $current_path\env\python311
+implementation = CPython
+version_info = 3.11.5.final.0
+virtualenv = 20.24.3
+include-system-site-packages = false
+base-prefix = $current_path\env\python311
+base-exec-prefix = $current_path\env\python311
+base-executable = $current_path\env\python311\python311.exe
+prompt = ws_tools-3.11
+"@
+
+Set-Content -Path $pyvenv_file_path -Value $pyvenv_data
+
+Start-Process -FilePath "chrome" -ArgumentList "http://127.0.0.1:60002"
+Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "start_web", "run",  "--host", "0.0.0.0", "--port", "60001" -NoNewWindow -Wait
+Read-Host -Prompt "请按任意键继续. . ."

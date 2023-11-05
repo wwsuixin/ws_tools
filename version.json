@@ -12,7 +12,7 @@
         "msg": "更新提示"
     },
     {
-        "name": "AnotherRedisDesktopManager",
+        "name": "w_redis",
         "version": "202311052223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/AnotherRedisDesktopManager.zip",
         "msg": "更新提示"

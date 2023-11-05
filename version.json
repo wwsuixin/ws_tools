@@ -1,5 +1,30 @@
 [
     {
+        "name": "ip2domain",
+        "version": "202311051519",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/ip2domain.zip",
+        "msg": "更新提示"
+    },{
+        "name": "finger",
+        "version": "202311051519",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/finger.zip",
+        "msg": "更新提示"
+    },    {
+        "name": "enscan",
+        "version": "202311051519",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/enscan.zip",
+        "msg": "更新提示"
+    },{
+        "name": "fofamap",
+        "version": "202311051519",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/fofamap.zip",
+        "msg": "更新提示"
+    },{
+        "name": "fofaviewer",
+        "version": "202311051519",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/fofaviewer.zip",
+        "msg": "更新提示"
+    },{
         "name": "start_web",
         "version": "202311051519",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",

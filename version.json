@@ -6,6 +6,12 @@
         "msg": "更新提示"
     },
     {
+        "name": "run",
+        "version": "202311051519",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/run.zip",
+        "msg": "更新提示"
+    },
+    {
         "name": "powershell",
         "version": "202311051538",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/powershell.zip",
@@ -38,12 +44,6 @@
         "name": "bandizip",
         "version": "202311050058",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/bandizip.zip",
-        "msg": "更新提示"
-    },
-    {
-        "name": "python311",
-        "version": "202311050058",
-        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/python311.zip",
         "msg": "更新提示"
     },
     {

@@ -3,13 +3,13 @@
         "name": "start_web",
         "version": "202311051519",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",
-        "msg": "更新提示"
+        "msg": "核心程序，请及时升级"
     },
     {
         "name": "run",
         "version": "202311052046",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/run.zip",
-        "msg": "更新提示"
+        "msg": "核心程序，请及时升级"
     },
     {
         "name": "powershell",
@@ -22,7 +22,8 @@
         "version": "202311051538",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/jdk11.zip",
         "msg": "更新提示"
-    },{
+    },
+    {
         "name": "jdk17",
         "version": "202311051538",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/jdk17.zip",

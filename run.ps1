@@ -66,7 +66,8 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
         else {
             if ($tool_name -eq "start_web") {
                 Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -o:./ $tmp_tool_file_path"
-            }elseif ($tool_name -eq "venv") {
+            }
+            elseif ($tool_name -eq "venv") {
                 Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -o:./.venv $tmp_tool_file_path"
             }
             else {
@@ -92,6 +93,12 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
 InstallTool "aria2c" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "bandizip" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "python311" $tmp_dir_path $env_dir_path $http_proxy
+InstallTool "powershell" $tmp_dir_path $env_dir_path $http_proxy
+InstallTool "jdk1.8" $tmp_dir_path $env_dir_path $http_proxy
+InstallTool "jdk11" $tmp_dir_path $env_dir_path $http_proxy
+InstallTool "jdk17" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "start_web" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "venv" $tmp_dir_path $env_dir_path $http_proxy
 
+Start-Process -FilePath "chrome" -ArgumentList "http://127.0.0.1:60001"
+Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "start_web", "run",  "--host", "0.0.0.0", "--port", "60001"

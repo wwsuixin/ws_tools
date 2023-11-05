@@ -2,7 +2,54 @@
     {
         "name": "start_web",
         "version": "202311051519",
-        "url":"https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",
-        "msg":"更新提示"
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "powershell",
+        "version": "202311051538",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/powershell.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "jdk11",
+        "version": "202311051538",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/jdk11.zip",
+        "msg": "更新提示"
+    },{
+        "name": "jdk17",
+        "version": "202311051538",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/jdk17.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "jdk1.8",
+        "version": "202311051538",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/jdk1.8.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "aria2c",
+        "version": "202311050058",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/aria2c.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "bandizip",
+        "version": "202311050058",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/bandizip.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "python311",
+        "version": "202311050058",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/python311.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "python311",
+        "version": "202311050058",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/python311.zip",
+        "msg": "更新提示"
     }
 ]

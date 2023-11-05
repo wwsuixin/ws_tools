@@ -10,10 +10,31 @@
 
 # 安装说明
 
-1. **仅下载`start.bat`文件即可自动化安装**
-2. **仅下载`start.bat`文件即可自动化安装**
-3. **仅下载`start.bat`文件即可自动化安装**
-4. 所有环境安装完成后将开启60001服务端口并自动使用默认浏览器打开**http://127.0.0.1:60001**
+1. 复制以下代码到某文件夹下的bat即可自动安装运行
+2. 所有环境安装完成后将开启60001服务端口并自动使用默认浏览器打开**http://127.0.0.1:60001**
+3. 后续运行也仅需要双击该bat文件
+```bat
+@echo off 
+
+setlocal enabledelayedexpansion
+title ws_tools
+
+@REM 切换到当前目录
+cd /d %~dp0
+
+@REM 设置代理url
+set http_proxy=https://gh.con.sh
+
+
+if not exist run.ps1 (
+    echo [-]检测到当前环境还未安装, 开始下载运行脚本
+    powershell -ExecutionPolicy Bypass -Command "& {iwr -useb !http_proxy!/https://github.com/wwsuixin/ws_tools/raw/main/run.ps1 -OutFile run.ps1}"
+
+) else (
+    powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
+)
+
+```
 
 # 常见问题
 - 问题：默认内置版本为python3.11

@@ -1,11 +1,5 @@
 [
     {
-        "name": "start_web",
-        "version": "202311072223",
-        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",
-        "msg": "更新提示"
-    },
-    {
         "name": "w_xray",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/w_xray.zip",
@@ -157,9 +151,9 @@
     },
     {
         "name": "start_web",
-        "version": "202311051519",
+        "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",
-        "msg": "核心程序，请及时升级"
+        "msg": "更新提示"
     },
     {
         "name": "powershell",

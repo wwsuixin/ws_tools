@@ -150,10 +150,10 @@
         "msg": "更新提示"
     },
     {
-        "name": "start_web",
+        "name": "ws_tools",
         "version": "202311072223",
-        "url": "https://cors.isteed.cc/github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",
-        "msg": "更新提示"
+        "url": "https://cors.isteed.cc/github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip",
+        "msg": "核心程序，请及时更新"
     },
     {
         "name": "powershell",

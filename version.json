@@ -144,12 +144,7 @@
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/start_web.zip",
         "msg": "核心程序，请及时升级"
     },
-    {
-        "name": "run",
-        "version": "202311052223",
-        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/run.zip",
-        "msg": "核心程序，请及时升级"
-    },
+
     {
         "name": "powershell",
         "version": "202311051538",

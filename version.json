@@ -6,6 +6,12 @@
         "msg": "更新提示"
     },
     {
+        "name": "dicts",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/dicts.zip",
+        "msg": "核心程序，请及时更新"
+    },
+    {
         "name": "w_oa",
         "version": "202311081055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/w_oa.zip",

@@ -45,21 +45,20 @@ powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
 	- 解答：参考文章：https://zhuanlan.zhihu.com/p/471661231
 
 
-# 功能展示（部分功能还在调试中）
+# 功能展示
 
--   工具首页，包含原创工具，如【报告平台、md5碰撞、fscan结果分析及验证、正则提取】等
+-   工具首页
 
 
 
 ![](files/images/readme-4.png)
 
--   已兼容第三方工具列表，如【sqlmap、fofamap、dirseach、finger】等，逐步调试稳定后放出
+-   已兼容第三方工具列表，如【sqlmap、fofamap、dirseach、finger】等，可从软件中心自动下载
 
 ![](files/images/readme-5.png)
 
 
 # 工具列表[编写中]
-
 
 ## 漏洞扫描
 ### 框架扫描

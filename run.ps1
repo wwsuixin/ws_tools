@@ -71,8 +71,7 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
             else {
                 Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -target:auto -o:$env_dir_path $tmp_tool_file_path"  -NoNewWindow -Wait
             }
-            $process = Get-Process -Name "bandizip"
-            $process.WaitForExit()
+
         }
 
         if (-not (Test-Path -Path $env_tool_version_path)) {
@@ -120,6 +119,6 @@ prompt = ws_tools-3.11
 
 Set-Content -Path $pyvenv_file_path -Value $pyvenv_data
 
-Start-Process -FilePath "chrome" -ArgumentList "http://127.0.0.1:60002"
-Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "start_web", "run",  "--host", "0.0.0.0", "--port", "60001" -NoNewWindow -Wait
+Start-Process -FilePath "chrome" -ArgumentList "http://127.0.0.1:60001"
+Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "start_web", "run", "--host", "0.0.0.0", "--port", "60001" -NoNewWindow -Wait
 Read-Host -Prompt "请按任意键继续. . ."

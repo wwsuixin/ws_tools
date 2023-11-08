@@ -49,13 +49,12 @@ powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
 
 -   工具首页
 
-
-
 ![](files/images/readme-4.png)
 
 -   已兼容第三方工具列表，如【sqlmap、fofamap、dirseach、finger】等，可从软件中心自动下载
 
-![](files/images/readme-5.png)
+![](files/images/readme-6.png)
+
 
 
 # 工具列表[编写中]

@@ -25,7 +25,7 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
     $env_tool_dir_path = "$env_dir_path/$tool_name"
     $env_tool_version_path = "$env_dir_path/$tool_name/w_version.txt"
     $URL = "$http_proxy/https://github.com/wwsuixin/ws_tools/releases/download/latest/$tool_name.zip"
-    if ($tool_name -eq "start_web") {
+    if ($tool_name -eq "ws_tools") {
         $env_tool_version_path = "$tool_name/w_version.txt"
     }
     if ($tool_name -eq "venv") {
@@ -62,7 +62,7 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
             Expand-Archive -Path $tmp_tool_file_path -DestinationPath "$env_tool_dir_path/"
         }
         else {
-            if ($tool_name -eq "start_web") {
+            if ($tool_name -eq "ws_tools") {
                 Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -o:./ $tmp_tool_file_path"  -NoNewWindow -Wait
             }
             elseif ($tool_name -eq "venv") {
@@ -98,7 +98,7 @@ InstallTool "powershell" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "jdk1.8" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "jdk11" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "jdk17" $tmp_dir_path $env_dir_path $http_proxy
-InstallTool "start_web" $tmp_dir_path $env_dir_path $http_proxy
+InstallTool "ws_tools" $tmp_dir_path $env_dir_path $http_proxy
 InstallTool "venv" $tmp_dir_path $env_dir_path $http_proxy
 
 $current_path = Get-Location
@@ -120,5 +120,5 @@ prompt = ws_tools-3.11
 Set-Content -Path $pyvenv_file_path -Value $pyvenv_data
 
 Start-Process -FilePath "chrome" -ArgumentList "http://127.0.0.1:60001"
-Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "start_web", "run", "--host", "0.0.0.0", "--port", "60001" -NoNewWindow -Wait
+Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "ws_tools", "run", "--host", "0.0.0.0", "--port", "60001" -NoNewWindow -Wait
 Read-Host -Prompt "请按任意键继续. . ."

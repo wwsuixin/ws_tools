@@ -49,11 +49,12 @@ powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
 
 -   工具首页，包含原创工具，如【报告平台、md5碰撞、fscan结果分析及验证、正则提取】等
 
-![[readme-3.png]]
+![[files/images/readme-3.png]]
 
 
 -   已兼容第三方工具列表，如【sqlmap、fofamap、dirseach、finger】等，逐步调试稳定后放出
-![[readme-2.png]]
+
+![[files/images/readme-2.png]]
 
 # 工具列表[编写中]
 

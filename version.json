@@ -1,5 +1,47 @@
 [
     {
+        "name": "wxapp",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/wxapp.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "w_oa",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/w_oa.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "TideFinger",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/TideFinger.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "urlfinder",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/urlfinder.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "w_thinkphp",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/w_thinkphp.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "sqlmap",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/sqlmap.zip",
+        "msg": "更新提示"
+    },
+    {
+        "name": "SocialEngineeringDictionaryGenerator",
+        "version": "202311081055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/SocialEngineeringDictionaryGenerator.zip",
+        "msg": "更新提示"
+    },
+    {
         "name": "w_xray",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/w_xray.zip",

@@ -36,12 +36,11 @@ if not exist run.ps1 (
 )
 powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
 
-
 ```
 
 # 常见问题
 - 问题：默认内置版本为python3.11
-	- 解答：不支持win10以下版本
+	- 解答：python311不支持win10以下版本
 - 问题：安装python依赖环境遇到报错：` Microsoft Visual C++ 14.0 or greater is required`
 	- 解答：参考文章：https://zhuanlan.zhihu.com/p/471661231
 
@@ -50,14 +49,16 @@ powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
 
 -   工具首页，包含原创工具，如【报告平台、md5碰撞、fscan结果分析及验证、正则提取】等
 
-![](<image/readme/192.168.234.143_60001_ (1)_LTh5Ggtr7X.png>)
+![[readme-3.png]]
+
 
 -   已兼容第三方工具列表，如【sqlmap、fofamap、dirseach、finger】等，逐步调试稳定后放出
+![[readme-2.png]]
 
-![](image/readme/image_yELi1GTXaC.png)
-
-
-# 工具列表
+# 工具列表[编写中]
 
 ## 其他
-- [报告平台](image/报告平台.md)
+- [报告平台](报告平台.md)
+## 漏洞扫描
+### 框架扫描
+小程序反编译

@@ -199,9 +199,9 @@
     },
     {
         "name": "ws_tools",
-        "version": "202311072223",
+        "version": "202311082223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip",
-        "msg": "核心程序，请及时更新"
+        "msg": "核心程序，请及时更新,更新后需要重启服务"
     },
     {
         "name": "powershell",

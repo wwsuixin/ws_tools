@@ -198,8 +198,14 @@
         "msg": "更新提示"
     },
     {
+        "name": "pandoc",
+        "version": "202311091858",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/pandoc.zip",
+        "msg": "报告平台核心程序"
+    },
+    {
         "name": "ws_tools",
-        "version": "202311082223",
+        "version": "202311091858",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip",
         "msg": "核心程序，请及时更新,更新后需要重启服务"
     },

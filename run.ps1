@@ -25,8 +25,9 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
     $env_tool_dir_path = "$env_dir_path/$tool_name"
     $env_tool_version_path = "$env_dir_path/$tool_name/w_version.txt"
     $URL = "$http_proxy/https://github.com/wwsuixin/ws_tools/releases/download/latest/$tool_name.zip"
+    
     if ($tool_name -eq "ws_tools") {
-        $env_tool_version_path = "$tool_name/w_version.txt"
+        $env_tool_version_path = "./w_version.txt"
     }
     if ($tool_name -eq "venv") {
         $env_tool_version_path = ".venv/w_version.txt"
@@ -40,7 +41,9 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
                 (New-Object System.Net.WebClient).DownloadFile($URL, $tmp_tool_file_path)
             }
             else {
+           
                 Start-Process -FilePath "env\aria2c\aria2c.exe" -ArgumentList "-x 16 -s 16 -k 1M -o $tmp_tool_file_path $URL"  -NoNewWindow -Wait
+
             }
             
             #判断文件不存在或大小为0KB
@@ -71,11 +74,10 @@ function InstallTool($tool_name, $tmp_dir_path, $env_dir_path, $http_proxy) {
             else {
                 Start-Process -FilePath "env\bandizip\bandizip.exe" -ArgumentList "x -y  -target:auto -o:$env_dir_path $tmp_tool_file_path"  -NoNewWindow -Wait
             }
-
         }
 
         if (-not (Test-Path -Path $env_tool_version_path)) {
-            Write-Host "[-] $tool_name.zip解压失败，请检查"
+            Write-Host "[-] $tool_name.zip解压失败，请检查,如果是ws_tools提示请忽略，重新运行bat即可，原因待排查"
             Read-Host -Prompt "请按任意键继续. . ."
             exit 1
         }
@@ -120,5 +122,5 @@ prompt = ws_tools-3.11
 Set-Content -Path $pyvenv_file_path -Value $pyvenv_data
 
 Start-Process -FilePath "chrome" -ArgumentList "http://127.0.0.1:60001"
-Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "ws_tools", "run", "--host", "0.0.0.0", "--port", "60001" -NoNewWindow -Wait
+Start-Process -FilePath ".venv\Scripts\python.exe" -ArgumentList "-m", "flask", "-A", "start_web", "run", "--host", "127.0.0.1", "--port", "60001" -NoNewWindow -Wait
 Read-Host -Prompt "请按任意键继续. . ."

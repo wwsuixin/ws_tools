@@ -1,18 +1,11 @@
 # ws\_tools使用手册
-# 项目简介
-1.  项目说明
-    -   本项目支持免安装运行
-    -   本项目通过python-flask作为服务端、layui作为web前端进行开发，意在提高日常渗透中常用工具使用的效率，如sqlmap的post注入不在需要手动创建文件、指定路径等重复工作
-    -   本项目内python脚本均使用pdm虚拟环境进行运行
-    -   项目基于AMD x64 windows 10环境开发，其他环境可能存在不兼容情况，请自测
-2.  项目地址
-    -  https://github.com/wwsuixin/ws_tools
 
 # 安装说明
 
-1. 复制以下代码到某文件夹下的bat即可自动安装运行
+1. **复制以下代码到某空白文件夹下，并保存为bat双击即可自动安装运行**
 2. 所有环境安装完成后将开启60001服务端口并自动使用默认浏览器打开**http://127.0.0.1:60001**
-3. 后续运行也仅需要双击该bat文件 
+3. 后续运行也仅需要双击该bat文件启动
+
 ```bat
 @echo off 
 
@@ -37,6 +30,17 @@ if not exist run.ps1 (
 powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
 
 ```
+
+
+# 项目简介
+1.  项目说明
+    -   本项目支持免安装运行
+    -   本项目通过python-flask作为服务端、layui作为web前端进行开发，意在提高日常渗透中常用工具使用的效率，如sqlmap的post注入不在需要手动创建文件、指定路径等重复工作
+    -   本项目内python脚本均使用pdm虚拟环境进行运行
+    -   项目基于AMD x64 windows 10环境开发，其他环境可能存在不兼容情况，请自测
+2.  项目地址
+    -  https://github.com/wwsuixin/ws_tools
+
 
 # 常见问题
 - 问题：默认内置版本为python3.11

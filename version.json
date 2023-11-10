@@ -1,5 +1,11 @@
 [
     {
+        "name": "ws_tools",
+        "version": "202311101545",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip",
+        "msg": "核心程序，请及时更新,更新后需要重启服务"
+    },
+    {
         "name": "wxapp",
         "version": "202311081637",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/wxapp.zip",
@@ -13,7 +19,7 @@
     },
     {
         "name": "w_oa",
-        "version": "202311081055",
+        "version": "202311101545",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/w_oa.zip",
         "msg": "更新提示"
     },
@@ -202,12 +208,6 @@
         "version": "202311091858",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/pandoc.zip",
         "msg": "报告平台核心程序"
-    },
-    {
-        "name": "ws_tools",
-        "version": "202311101056",
-        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip",
-        "msg": "核心程序，请及时更新,更新后需要重启服务"
     },
     {
         "name": "powershell",

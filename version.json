@@ -3,6 +3,12 @@
         "name": "ws_tools",
         "version": "202311101545",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip",
+        "msg": "核心程序，先更新venv，再更新,更新后需要重启服务"
+    },
+    {
+        "name": "venv",
+        "version": "202311101545",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/venv.zip",
         "msg": "核心程序，请及时更新,更新后需要重启服务"
     },
     {

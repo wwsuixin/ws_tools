@@ -205,7 +205,7 @@
     },
     {
         "name": "ws_tools",
-        "version": "202311091858",
+        "version": "202311101056",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip",
         "msg": "核心程序，请及时更新,更新后需要重启服务"
     },
@@ -241,7 +241,7 @@
     },
     {
         "name": "bandizip",
-        "version": "202311050058",
+        "version": "202311101056",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/latest/bandizip.zip",
         "msg": "依赖程序，必装"
     },

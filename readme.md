@@ -82,6 +82,17 @@ start start.bat
     -  https://github.com/wwsuixin/ws_tools
 
 
+# 工具使用说明[编写中]
+
+## 漏洞扫描
+### 框架扫描
+- [小程序反编译](files/小程序反编译.md)
+## 数据处理
+### 综合
+- [正则-同类数据提取](files/正则-同类数据提取.md)
+## 其他
+- [报告平台](files/报告平台.md)
+
 # 常见问题
 
 - 问题：升级后出现无法启动情况
@@ -122,17 +133,6 @@ start start.bat
 ![image.png](https://raw.githubusercontent.com/wwsuixin/images/main/202311112104296.png)
 
 
-
-# 工具使用说明[编写中]
-
-## 漏洞扫描
-### 框架扫描
-- [小程序反编译](files/小程序反编译.md)
-## 数据处理
-### 综合
-- [正则-同类数据提取](files/正则-同类数据提取.md)
-## 其他
-- [报告平台](files/报告平台.md)
 
 # 联系我
 

@@ -115,4 +115,5 @@ start start.bat
 - [报告平台](files/报告平台.md)
 
 # 联系我
-![](files/images/readme-7.png)
+
+![](files/images/3d63ad268018cab8100d71b423bf5e1b_MD5.bmp)

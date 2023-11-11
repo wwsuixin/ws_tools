@@ -1,14 +1,17 @@
 # ws\_tools使用手册
 
 # 安装说明
+## 先看注意
+1. bat脚本需要以gb2312编码保存
+2. 其他问题反馈请添加微信公众号`无尽信安`
 
-1. **复制以下代码到某空白文件夹下，并保存为bat双击即可自动安装运行**
-2. 所有环境安装完成后将开启60001服务端口并自动使用默认浏览器打开**http://127.0.0.1:60001**
-3. 后续运行也仅需要双击该bat文件启动
-4. **当前项目不支持存在中文路径**
-5. 如果日常使用过程中升级后出现无法启动情况请删除`.venv`以及`start_web`目录再重新运行以下bat即可
-6. 更多问题反馈请添加微信公众号`无尽信安`
+3. **复制以下代码到某空白文件夹下，并保存为bat双击即可自动安装运行,注意文件格式必须为gb2312**
+4. 所有环境安装完成后将开启60001服务端口并自动使用默认浏览器打开**http://127.0.0.1:60001**
+5. 后续运行也仅需要双击该bat文件启动
+6. **当前项目不支持存在中文路径**
+7. 如果日常使用过程中升级后出现无法启动情况请删除`.venv`以及`start_web`目录再重新运行以下bat即可
 
+## 安装脚本
 ```bat
 @echo off
 title ws_tools
@@ -23,7 +26,7 @@ if not exist tmp (
     mkdir tmp
 )
 
-if not exist run.ps1 (
+if not exist w_version.txt (
     echo [-]检测到当前环境还未安装, 开始下载运行脚本
     choice /C YN /M "询问是否开始安装Y继续，回N退出:"
     if errorlevel 2 (
@@ -33,24 +36,42 @@ if not exist run.ps1 (
     echo [-]开始下载运行脚本
     powershell -ExecutionPolicy Bypass -Command "& {iwr -useb !http_proxy!/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip -OutFile tmp/ws_tools.zip}"
     @REM 解压ws_tools.zip到指定文件夹
-   powershell -ExecutionPolicy Bypass -Command "Expand-Archive -Path 'tmp\ws_tools.zip' -DestinationPath './'"
+   @REM 覆盖解压ws_tools.zip到指定文件夹
+   powershell -ExecutionPolicy Bypass -Command "Expand-Archive -Path 'tmp\ws_tools.zip' -DestinationPath './' -Force"
 )
 
-if not exist run.ps1 (
+if not exist w_version.txt (
     echo [-]网络环境异常,请检查网络......
     pause
     exit
 )
-
 @REM 删除tmp/ws_tools.zip
 if exist tmp\ws_tools.zip (
     del tmp\ws_tools.zip
 )
 
 powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
+```
+## 重装脚本
+
+```bat
+@echo off 
+echo 该脚本仅用于服务无法启动时进行核心程序重装,没啥影响,放心装
+choice /C YN /M "是否开始[Y/N]:"
+if errorlevel 2 (
+    echo [-]安装已取消
+    exit
+)
+@REM 删除.venv、start_web、pyproject.toml等目录
+if exist .venv (
+    rmdir /s /q .venv/w_version.txt
+)
+
+if exist w_version.txt (
+    del w_version.txt
+)
 
 ```
-
 
 # 项目简介
 1.  项目说明

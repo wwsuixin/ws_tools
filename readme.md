@@ -34,7 +34,7 @@ if not exist w_version.txt (
         exit
     )
     echo [-]开始下载运行脚本
-    powershell -ExecutionPolicy Bypass -Command "& {iwr -useb !http_proxy!/https://github.com/wwsuixin/ws_tools/releases/download/latest/ws_tools.zip -OutFile tmp/ws_tools.zip}"
+    powershell -ExecutionPolicy Bypass -Command "& {iwr -useb !http_proxy!/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip -OutFile tmp/ws_tools.zip}"
     @REM 解压ws_tools.zip到指定文件夹
    @REM 覆盖解压ws_tools.zip到指定文件夹
    powershell -ExecutionPolicy Bypass -Command "Expand-Archive -Path 'tmp\ws_tools.zip' -DestinationPath './' -Force"
@@ -71,6 +71,7 @@ if exist w_version.txt (
     del w_version.txt
 )
 
+start start.bat
 ```
 
 # 项目简介

@@ -86,15 +86,15 @@ start start.bat
 
 ## 漏洞扫描
 ### 框架扫描
-- [小程序反编译](files/小程序反编译.md)
+- [小程序反编译](https://mp.weixin.qq.com/s/M3mf04rmHV3S5AvvgWv-BA)
 ## 数据处理
 ### 综合
-- [正则-同类数据提取](files/正则-同类数据提取.md)
+- [正则-同类数据提取](https://mp.weixin.qq.com/s/PvQaFzZRuxgb2IlhR9-1Mg)
 ## 内网渗透
 ### 内网横向
-- [fscan结果分析&批量验证](fscan结果分析&批量验证)
+- [fscan结果分析&批量验证](files/fscan结果分析&批量验证)
 ## 其他
-- [报告平台](files/报告平台.md)
+- [报告平台](https://mp.weixin.qq.com/s/TQQXFuoVf8POpzQpBwXilw)
 
 # 常见问题
 

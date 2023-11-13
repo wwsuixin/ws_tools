@@ -8,8 +8,8 @@
     {
         "name": "w_redis",
         "version": "202311120125",
-        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
-        "msg": "核心程序，请及时更新,更新后自动重启服务"
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_redis.zip",
+        "msg": "无更新提示"
     },
     {
         "name": "venv",
@@ -21,49 +21,49 @@
         "name": "wxapp",
         "version": "202311081637",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/wxapp.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "dicts",
         "version": "202311081055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dicts.zip",
-        "msg": "核心程序，请及时更新"
+        "msg": "dirsearch、MD5碰撞依赖文件，核心程序，请及时更新"
     },
     {
         "name": "w_oa",
         "version": "202311101545",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_oa.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "TideFinger",
         "version": "202311081055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/TideFinger.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "urlfinder",
         "version": "202311081055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/urlfinder.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "w_thinkphp",
         "version": "202311081055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_thinkphp.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "sqlmap",
         "version": "202311081055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmap.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "SocialEngineeringDictionaryGenerator",
         "version": "202311120125",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/SocialEngineeringDictionaryGenerator.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "w_xray",
@@ -75,145 +75,145 @@
         "name": "w_shiro",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_shiro.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "server_login",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/server_login.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "reverse_shell_generator",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/reverse_shell_generator.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "PackerFuzzer",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/PackerFuzzer.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "MobaXterm",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/MobaXterm.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "mdut",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/mdut.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "ihoneyBakFileScan_Modify",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ihoneyBakFileScan_Modify.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "heapdump",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/heapdump.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "gorailgun",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/gorailgun.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "godzilla",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/godzilla.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "fastgithub",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fastgithub.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "dumpall",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dumpall.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "dirsearch",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dirsearch.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "burpsuite",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/burpsuite.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "antsword",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/antsword.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "ak_search",
         "version": "202311072223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ak_search.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "behinder",
         "version": "202311052223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/behinder.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "BBScan",
         "version": "202311052223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/BBScan.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "w_nacos",
         "version": "202311052223",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_nacos.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "ip2domain",
         "version": "202311051519",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ip2domain.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "finger",
         "version": "202311051519",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/finger.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "enscan",
         "version": "202311051519",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/enscan.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "fofamap",
         "version": "202311051519",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofamap.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "fofaviewer",
         "version": "202311051519",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofaviewer.zip",
-        "msg": "更新提示"
+        "msg": "无更新提示"
     },
     {
         "name": "pandoc",

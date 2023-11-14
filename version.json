@@ -1,13 +1,13 @@
 [
     {
         "name": "ws_tools",
-        "version": "202311120125",
+        "version": "202311141622",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
         "msg": "核心程序，请及时更新,更新后自动重启服务"
     },
     {
         "name": "w_redis",
-        "version": "202311120125",
+        "version": "202311131425",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_redis.zip",
         "msg": "无更新提示"
     },
@@ -25,7 +25,7 @@
     },
     {
         "name": "dicts",
-        "version": "202311081055",
+        "version": "202311131425",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dicts.zip",
         "msg": "dirsearch、MD5碰撞依赖文件，核心程序，请及时更新"
     },
@@ -79,9 +79,15 @@
     },
     {
         "name": "server_login",
-        "version": "202311072223",
+        "version": "202311141622",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/server_login.zip",
         "msg": "无更新提示"
+    },
+    {
+        "name": "DataMiner",
+        "version": "202311141622",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/DataMiner.zip",
+        "msg": "数据库自动取样工具"
     },
     {
         "name": "reverse_shell_generator",

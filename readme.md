@@ -84,6 +84,11 @@ start start.bat
 
 # 工具使用说明[编写中]
 
+## 信息收集
+### 单位名称
+#### 教育网IP查询
+- [github地址](files/教育网IP查询)
+- [微信公众号地址](https://mp.weixin.qq.com/s/jPHsVteFBdVhuZczXsGkDw)
 ## 漏洞扫描
 ### 框架扫描
 #### 小程序反编译

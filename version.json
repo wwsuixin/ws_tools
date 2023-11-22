@@ -55,9 +55,9 @@
     },
     {
         "name": "sqlmap",
-        "version": "202311081055",
+        "version": "202311221102",
         "url": "https://dl-slb.ghpig.top/https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmap.zip",
-        "msg": "无更新提示"
+        "msg": "dev版本导致部分注入无法测试，回退到1.7稳定版本"
     },
     {
         "name": "SocialEngineeringDictionaryGenerator",

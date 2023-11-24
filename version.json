@@ -1,9 +1,21 @@
 [
     {
         "name": "ws_tools",
-        "version": "202311241749",
+        "version": "202311242323",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
         "msg": "核心程序，请及时更新,更新后自动重启服务"
+    },
+    {
+        "name": "frp",
+        "version": "202311242323",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/frp.zip",
+        "msg": "新增内网穿透工具"
+    },
+    {
+        "name": "frp_server",
+        "version": "202311242323",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/frp_server.zip",
+        "msg": "获取公网可用frps，防溯源利器"
     },
     {
         "name": "sql_connect",

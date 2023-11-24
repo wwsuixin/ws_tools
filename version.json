@@ -241,7 +241,7 @@
     },
     {
         "name": "powershell",
-        "version": "202311051538",
+        "version": "202311241116",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/powershell.zip",
         "msg": "依赖程序，必装"
     },

@@ -21,8 +21,6 @@ if not exist tmp (
 if not exist w_version.txt (
     echo [-]Detected that the current environment is not installed, start downloading and running the script
     powershell -ExecutionPolicy Bypass -Command "& {iwr -useb !http_proxy!/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip -OutFile tmp/ws_tools.zip}"
-    @REM Extract ws_tools.zip to the specified folder
-    @REM Overwrite and extract ws_tools.zip to the specified folder
     powershell -ExecutionPolicy Bypass -Command "Expand-Archive -Path 'tmp\ws_tools.zip' -DestinationPath './' -Force"
 )
 
@@ -32,10 +30,12 @@ if not exist w_version.txt (
     pause
     exit
 )
-@REM Delete tmp/ws_tools.zip
 if exist tmp\ws_tools.zip (
     del tmp\ws_tools.zip
 )
-
-env\powershell\pwsh.exe  -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
+if exist env\powershell\pwsh.exe (
+    env\powershell\pwsh.exe -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
+) else (
+    powershell -ExecutionPolicy Bypass -File run.ps1 !http_proxy!
+)
 exit

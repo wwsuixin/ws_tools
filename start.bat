@@ -6,7 +6,7 @@ setlocal enabledelayedexpansion
 cd /d %~dp0
 
 @REM …Ë÷√¥˙¿Ìurl
-set http_proxy=https://gh.h233.eu.org/
+set http_proxy=https://gh.con.sh
 if not exist tmp (
     mkdir tmp
 )

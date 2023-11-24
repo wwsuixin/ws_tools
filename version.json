@@ -2,271 +2,271 @@
     {
         "name": "ws_tools",
         "version": "202311201101",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
         "msg": "核心程序，请及时更新,更新后自动重启服务"
     },
     {
         "name": "sql_connect",
         "version": "202311201101",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/sql_connect.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/sql_connect.zip",
         "msg": "无更新提示"
     },
     {
         "name": "venv",
         "version": "202311101545",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/venv.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/venv.zip",
         "msg": "核心程序，请及时更新,更新后自动重启服务"
     },
     {
         "name": "wxapp",
         "version": "202311081637",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/wxapp.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/wxapp.zip",
         "msg": "无更新提示"
     },
     {
         "name": "dicts",
         "version": "202311131425",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/dicts.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dicts.zip",
         "msg": "dirsearch、MD5碰撞依赖文件，核心程序，请及时更新"
     },
     {
         "name": "w_oa",
         "version": "202311101545",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/w_oa.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_oa.zip",
         "msg": "无更新提示"
     },
     {
         "name": "TideFinger",
         "version": "202311081055",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/TideFinger.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/TideFinger.zip",
         "msg": "无更新提示"
     },
     {
         "name": "urlfinder",
         "version": "202311081055",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/urlfinder.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/urlfinder.zip",
         "msg": "无更新提示"
     },
     {
         "name": "w_thinkphp",
         "version": "202311081055",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/w_thinkphp.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_thinkphp.zip",
         "msg": "无更新提示"
     },
     {
         "name": "sqlmap",
         "version": "202311221102",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmap.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmap.zip",
         "msg": "dev版本导致部分注入无法测试，回退到1.7稳定版本"
     },
     {
         "name": "SocialEngineeringDictionaryGenerator",
         "version": "202311120125",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/SocialEngineeringDictionaryGenerator.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/SocialEngineeringDictionaryGenerator.zip",
         "msg": "无更新提示"
     },
     {
         "name": "w_xray",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/w_xray.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_xray.zip",
         "msg": "xray+xpoc的合成包"
     },
     {
         "name": "w_shiro",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/w_shiro.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_shiro.zip",
         "msg": "无更新提示"
     },
     {
         "name": "server_login",
         "version": "202311141622",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/server_login.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/server_login.zip",
         "msg": "无更新提示"
     },
     {
         "name": "DataMiner",
         "version": "202311141622",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/DataMiner.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/DataMiner.zip",
         "msg": "数据库自动取样工具"
     },
     {
         "name": "reverse_shell_generator",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/reverse_shell_generator.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/reverse_shell_generator.zip",
         "msg": "无更新提示"
     },
     {
         "name": "PackerFuzzer",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/PackerFuzzer.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/PackerFuzzer.zip",
         "msg": "无更新提示"
     },
     {
         "name": "MobaXterm",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/MobaXterm.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/MobaXterm.zip",
         "msg": "无更新提示"
     },
     {
         "name": "mdut",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/mdut.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/mdut.zip",
         "msg": "无更新提示"
     },
     {
         "name": "ihoneyBakFileScan_Modify",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/ihoneyBakFileScan_Modify.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ihoneyBakFileScan_Modify.zip",
         "msg": "无更新提示"
     },
     {
         "name": "heapdump",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/heapdump.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/heapdump.zip",
         "msg": "无更新提示"
     },
     {
         "name": "gorailgun",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/gorailgun.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/gorailgun.zip",
         "msg": "无更新提示"
     },
     {
         "name": "godzilla",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/godzilla.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/godzilla.zip",
         "msg": "无更新提示"
     },
     {
         "name": "fastgithub",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/fastgithub.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fastgithub.zip",
         "msg": "无更新提示"
     },
     {
         "name": "dumpall",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/dumpall.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dumpall.zip",
         "msg": "无更新提示"
     },
     {
         "name": "dirsearch",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/dirsearch.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dirsearch.zip",
         "msg": "无更新提示"
     },
     {
         "name": "burpsuite",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/burpsuite.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/burpsuite.zip",
         "msg": "无更新提示"
     },
     {
         "name": "antsword",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/antsword.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/antsword.zip",
         "msg": "无更新提示"
     },
     {
         "name": "ak_search",
         "version": "202311072223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/ak_search.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ak_search.zip",
         "msg": "无更新提示"
     },
     {
         "name": "behinder",
         "version": "202311052223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/behinder.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/behinder.zip",
         "msg": "无更新提示"
     },
     {
         "name": "BBScan",
         "version": "202311052223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/BBScan.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/BBScan.zip",
         "msg": "无更新提示"
     },
     {
         "name": "w_nacos",
         "version": "202311052223",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/w_nacos.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_nacos.zip",
         "msg": "无更新提示"
     },
     {
         "name": "ip2domain",
         "version": "202311051519",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/ip2domain.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ip2domain.zip",
         "msg": "无更新提示"
     },
     {
         "name": "finger",
         "version": "202311051519",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/finger.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/finger.zip",
         "msg": "无更新提示"
     },
     {
         "name": "enscan",
         "version": "202311051519",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/enscan.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/enscan.zip",
         "msg": "无更新提示"
     },
     {
         "name": "fofamap",
         "version": "202311051519",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/fofamap.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofamap.zip",
         "msg": "无更新提示"
     },
     {
         "name": "fofaviewer",
         "version": "202311051519",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/fofaviewer.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofaviewer.zip",
         "msg": "无更新提示"
     },
     {
         "name": "pandoc",
         "version": "202311091858",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/pandoc.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/pandoc.zip",
         "msg": "报告平台核心程序"
     },
     {
         "name": "powershell",
         "version": "202311051538",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/powershell.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/powershell.zip",
         "msg": "依赖程序，必装"
     },
     {
         "name": "jdk11",
         "version": "202311051538",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk11.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk11.zip",
         "msg": "依赖程序，必装"
     },
     {
         "name": "jdk17",
         "version": "202311051538",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk17.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk17.zip",
         "msg": "依赖程序，必装"
     },
     {
         "name": "jdk1.8",
         "version": "202311051538",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk1.8.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk1.8.zip",
         "msg": "依赖程序，必装"
     },
     {
         "name": "aria2c",
         "version": "202311050058",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/aria2c.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/aria2c.zip",
         "msg": "依赖程序，必装"
     },
     {
         "name": "bandizip",
         "version": "202311101056",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/bandizip.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/bandizip.zip",
         "msg": "依赖程序，必装"
     },
     {
         "name": "python311",
         "version": "202311050058",
-        "url": "https://gh.h233.eu.org/https://github.com/wwsuixin/ws_tools/releases/download/main/python311.zip",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/python311.zip",
         "msg": "依赖程序，必装"
     }
 ]

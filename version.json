@@ -1,9 +1,9 @@
 [
     {
         "name": "ws_tools",
-        "version": "202311251041",
+        "version": "202311251042",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
-        "msg": "核心程序，请及时更新,更新后自动重启服务"
+        "msg": "核心程序，请及时更新,更新后自动重启服务，如果一直显示升级请运行【核心重装脚本.bat】"
     },
     {
         "name": "frp",

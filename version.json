@@ -1,7 +1,7 @@
 [
     {
         "name": "ws_tools",
-        "version": "202311251040",
+        "version": "202311251041",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
         "msg": "核心程序，请及时更新,更新后自动重启服务"
     },

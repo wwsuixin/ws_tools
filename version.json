@@ -1,9 +1,21 @@
 [
     {
         "name": "ws_tools",
-        "version": "202311282250",
+        "version": "202311302055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
-        "msg": "核心程序，请及时更新,更新后自动重启服务，如果一直显示升级请运行【核心重装脚本.bat】"
+        "msg": "【内测中，请勿更新】核心程序，请及时更新,更新后自动重启服务，如果一直显示升级请运行【核心重装脚本.bat】"
+    },
+    {
+        "name": "linshi_fuwuqi",
+        "version": "202311302055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/linshi_fuwuqi.zip",
+        "msg": "【内测中，请勿更新】临时服务器"
+    },
+    {
+        "name": "nuclei",
+        "version": "202311302055",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/nuclei.zip",
+        "msg": "【内测中，请勿更新】nuclei漏扫工具"
     },
     {
         "name": "frp",
@@ -25,9 +37,9 @@
     },
     {
         "name": "venv",
-        "version": "202311101545",
+        "version": "202311302055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/venv.zip",
-        "msg": "核心程序，请及时更新,更新后自动重启服务"
+        "msg": "【内测中，请勿更新】核心程序，请及时更新,更新后自动重启服务"
     },
     {
         "name": "wxapp",
@@ -43,7 +55,7 @@
     },
     {
         "name": "w_oa",
-        "version": "202311101545",
+        "version": "202311302055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_oa.zip",
         "msg": "各类oa漏洞验证工具"
     },
@@ -73,7 +85,7 @@
     },
     {
         "name": "SocialEngineeringDictionaryGenerator",
-        "version": "202311120125",
+        "version": "202311302055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/SocialEngineeringDictionaryGenerator.zip",
         "msg": "无更新提示"
     },
@@ -175,7 +187,7 @@
     },
     {
         "name": "antsword",
-        "version": "202311072223",
+        "version": "202311302055",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/antsword.zip",
         "msg": "中国蚁剑是一款跨平台的开源网站管理工具。"
     },

@@ -21,32 +21,111 @@
     -  https://github.com/wwsuixin/ws_tools
 
 
-# 工具使用说明[编写中]
+# 工具使用说明【编写中】
 
 ## 信息收集
 ### 单位名称
+### 企业信息收集
 #### 教育网IP查询
 - [github地址](files/教育网IP查询)
 - [微信公众号地址](https://mp.weixin.qq.com/s/jPHsVteFBdVhuZczXsGkDw)
+### 域名、IP
+#### fofamap
+#### Fofa客户端
+#### Ip查询\[域名、权重、备案\]
+#### Ip查询\[归属地\]
+### 指纹识别
+#### finger
+### 抓包工具
+#### burpsuite
+#### ~~微信小程序抓包~~
+
 ## 漏洞扫描
+### 目录扫描
+#### dirsearch
+#### PackerFuzzer
+#### 网站敏感信息扫描-bbscan
+#### 网站备份文件扫描-ihoneyBakFileScan_Modify
+#### ~~集成扫描~~
+### 综合扫描
+#### xray
+#### xpoc
+#### nuclei
+#### tidefinger
+#### gorailgun
 ### 框架扫描
+#### thinkphp
+#### weblogic
 #### 小程序反编译
 - [github地址](files/小程序反编译.md)
 - [微信公众号地址](https://mp.weixin.qq.com/s/M3mf04rmHV3S5AvvgWv-BA)
+#### OA
+#### Shiro
+## 漏洞利用
+### 漏洞利用
+
+#### sqlmap
+#### dbeaver
+#### 数据库连接
+#### mdut
+#### 数据库取样-DataMiner
+### webshell连接
+#### 中国蚁剑
+#### 冰蝎
+#### 哥斯拉
+### 框架利用
+#### .git/.svn/.DS_Store利用
+#### Nacos
+#### heapdump
+### 反弹shell
+#### 生成命令-reverse_shell_generator
+#### 写马辅助-webshell_encode
+#### 临时服务器
+- [github地址](files/临时服务器.md)
+- 微信公众号地址
 ## 数据处理
 ### 综合
+#### URL处理
+#### 掩码转IP
 ### 正则-同类数据提取
 - [github地址](files/正则-同类数据提取.md)
 - [微信公众号地址](https://mp.weixin.qq.com/s/PvQaFzZRuxgb2IlhR9-1Mg)
+#### 正则-敏感数据提取
+### 社工字典
+#### md5碰撞
+#### 字典生成
+#### 默认用户密码查询
 ## 内网渗透
+### 内网资产
+#### 进程识别
+- [github地址](files/进程识别.md)
+- [微信公众号地址](https://mp.weixin.qq.com/s/i-ND212vKRm_a82rbg60VA)
 ### 内网横向
-#### fscan结果分析&批量验证
+#### fscan结果分析
 - [github地址](files/fscan结果分析&批量验证.md)
-- 微信公众号地址
+- [微信公众号地址](https://mp.weixin.qq.com/s/uTBLbq7DxKHSdwlMuxdQDg)
+#### 服务登录验证
+### 内网穿透
+#### frp
+
+#### 防溯源
+## 系统工具
+### 代理
+#### socks代理
+#### fastgithub
+### 综合
+#### 系统命令执行
+
+#### ~~痕迹清理~~
+#### MobaXterm
+
 ## 其他
 #### 报告平台
 - [github地址](files/报告平台.md)
 - [微信公众号地址](https://mp.weixin.qq.com/s/TQQXFuoVf8POpzQpBwXilw)
+#### 其他工具快捷方式
+#### 下载器
+
 
 # 常见问题
 
@@ -60,32 +139,11 @@
 	- 解答：参考文章：https://zhuanlan.zhihu.com/p/471661231
 
 
-# 功能展示
+# 界面展示
 
 ## 工具首页
 
-![readme-3.png](https://raw.githubusercontent.com/wwsuixin/images/main/202311112103518.png)
-
-
-## 信息收集
-
-![readme-1.png](https://raw.githubusercontent.com/wwsuixin/images/main/202311112103333.png)
-
-## 漏洞扫描
-
-![image.png](https://raw.githubusercontent.com/wwsuixin/images/main/202311112104373.png)
-
-## 漏洞利用
-
-![image.png](https://raw.githubusercontent.com/wwsuixin/images/main/202311112104834.png)
-
-## 数据处理
-
-![image.png](https://raw.githubusercontent.com/wwsuixin/images/main/202311112104324.png)
-
-## 系统工具
-
-![image.png](https://raw.githubusercontent.com/wwsuixin/images/main/202311112104296.png)
+![image.png](https://raw.githubusercontent.com/wwsuixin/images/main/202312121422306.png)
 
 
 

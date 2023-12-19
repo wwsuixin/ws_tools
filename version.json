@@ -39,7 +39,7 @@
         "name": "venv",
         "version": "202312190920",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/venv.zip",
-        "msg": "【内测】核心程序，必须优先于ws_tools更新"
+        "msg": "核心程序，必须优先于ws_tools更新"
     },
     {
         "name": "wxapp",

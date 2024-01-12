@@ -1,7 +1,7 @@
 [
     {
         "name": "ws_tools",
-        "version": "202312271710",
+        "version": "202401111635",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
         "msg": "【测试版、主程序】核心程序，请及时更新,更新后自动重启服务，如果一直显示升级请运行【核心重装脚本.bat】"
     },
@@ -43,7 +43,7 @@
     },
     {
         "name": "venv",
-        "version": "202312271710",
+        "version": "202401111635",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/venv.zip",
         "msg": "【核心程序】必须优先于ws_tools更新"
     },
@@ -97,7 +97,7 @@
     },
     {
         "name": "w_xray",
-        "version": "202311072223",
+        "version": "202401111635",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_xray.zip",
         "msg": "xray+xpoc的合成包"
     },
@@ -228,8 +228,20 @@
         "msg": "通过IP查域名"
     },
     {
+        "name": "fofa_hack",
+        "version": "202401111635",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofa_hack.zip",
+        "msg": "fofa免费版"
+    },
+    {
+        "name": "webshell_bypass",
+        "version": "202401111635",
+        "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/webshell_bypass.zip",
+        "msg": "webshell免杀"
+    },
+    {
         "name": "finger",
-        "version": "202311051519",
+        "version": "202401111635",
         "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/finger.zip",
         "msg": "指纹识别"
     },

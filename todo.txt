@@ -1,0 +1,22 @@
+绿盟ez扫描工具
+添加ghauri注入工具
+
+webshell生成器：https://github.com/cseroad/Webshell_Generate
+
+360天擎
+弱口令漏洞
+账号admin
+密码Admin@123
+锐捷AC
+弱口令漏洞
+ admin Admin@123
+锐捷ONC
+弱口令漏洞
+admin Admin@123
+绿盟远程安全评估系统 RSAS
+弱口令漏洞
+admin/admin_12345
+H3C vStor系统存在管理员弱口令并可注册管理员账号 
+账号：root
+密码：123456
+ip-com路由器系统存在弱口令 管理员账号：admin/admin

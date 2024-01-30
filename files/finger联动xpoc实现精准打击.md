@@ -1,3 +1,7 @@
+---
+quickshare-date: 2024-01-12 17:22:39
+quickshare-url: "https://noteshare.space/note/clrafk1g1216801mwaarbj076#8X8I/ps0koWamig4hs/Oi3MXP86D+9NU1naCHRi/TBY"
+---
 # 背景
 
 - 日常渗透中常常会考虑该系统使用的是什么框架，然后对其进行指纹识别，再查询是否存在历史漏洞，再一步进行poc验证

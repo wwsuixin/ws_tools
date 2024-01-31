@@ -1,7 +1,7 @@
 [
         {
                 "name": "ws_tools",
-                "version": "202401301537",
+                "version": "202401311445",
                 "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
                 "msg": "[主程序]核心程序,请及时更新,更新后自动重启服务,如果一直显示升级请运行[核心重装脚本.bat]"
         },
@@ -97,7 +97,7 @@
         },
         {
                 "name": "w_xray",
-                "version": "202401111635",
+                "version": "202401311445",
                 "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_xray.zip",
                 "msg": "xray+xpoc的合成包"
         },

@@ -12,6 +12,12 @@
                 "msg": "hvv数据库批量验证脚本"
         },
         {
+                "name": "PortableGit",
+                "version": "202312271710",
+                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/PortableGit.zip",
+                "msg": "依赖环境:git"
+        },
+        {
                 "name": "linshi_fuwuqi",
                 "version": "202311302055",
                 "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/linshi_fuwuqi.zip",

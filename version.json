@@ -13,7 +13,7 @@
         },
         {
                 "name": "PortableGit",
-                "version": "202312271710",
+                "version": "202401311445",
                 "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/PortableGit.zip",
                 "msg": "依赖环境:git"
         },

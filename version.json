@@ -320,7 +320,7 @@
         {
                 "name": "github_download",
                 "version": "202402201611",
-                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/github_download.zip",
+                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/github_download.zip",
                 "msg": "依赖程序,必装"
         }
 ]

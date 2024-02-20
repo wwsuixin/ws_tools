@@ -322,5 +322,11 @@
                 "version": "202402201611",
                 "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/github_download.zip",
                 "msg": "依赖程序,必装"
+        },
+        {
+                "name": "TscanPlus",
+                "version": "202402201611",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/TscanPlus.zip",
+                "msg": "端口扫描、目录扫描、域名枚举、网络空间测绘、密码生成"
         }
 ]

@@ -2,319 +2,319 @@
         {
                 "name": "ws_tools",
                 "version": "202401311445",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
                 "msg": "[主程序]核心程序,请及时更新,更新后自动重启服务,如果一直显示升级请运行[核心重装脚本.bat]"
         },
         {
                 "name": "hvv_sql",
                 "version": "202312271710",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/hvv_sql.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/hvv_sql.zip",
                 "msg": "hvv数据库批量验证脚本"
         },
         {
                 "name": "PortableGit",
                 "version": "202401311445",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/PortableGit.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/PortableGit.zip",
                 "msg": "依赖环境:git"
         },
         {
                 "name": "linshi_fuwuqi",
                 "version": "202311302055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/linshi_fuwuqi.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/linshi_fuwuqi.zip",
                 "msg": "临时服务器"
         },
         {
                 "name": "nuclei",
                 "version": "202311302055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/nuclei.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/nuclei.zip",
                 "msg": "nuclei漏扫工具"
         },
         {
                 "name": "frp",
                 "version": "202311242323",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/frp.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/frp.zip",
                 "msg": "新增内网穿透工具"
         },
         {
                 "name": "frp_server",
                 "version": "202311242323",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/frp_server.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/frp_server.zip",
                 "msg": "获取公网可用frps,防溯源利器"
         },
         {
                 "name": "sql_connect",
                 "version": "202311201101",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/sql_connect.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/sql_connect.zip",
                 "msg": "新增数据库连接工具-navicat"
         },
         {
                 "name": "venv",
                 "version": "202401111635",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/venv.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/venv.zip",
                 "msg": "[核心程序]必须优先于ws_tools更新"
         },
         {
                 "name": "wxapp",
                 "version": "202311081637",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/wxapp.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/wxapp.zip",
                 "msg": "微信小程序批量反编译工具"
         },
         {
                 "name": "dicts",
                 "version": "202311131425",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dicts.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/dicts.zip",
                 "msg": "dirsearch、MD5碰撞依赖文件,核心程序,请及时更新"
         },
         {
                 "name": "w_oa",
                 "version": "202311302055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_oa.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/w_oa.zip",
                 "msg": "各类oa漏洞验证工具"
         },
         {
                 "name": "TideFinger",
                 "version": "202311081055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/TideFinger.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/TideFinger.zip",
                 "msg": "无更新提示"
         },
         {
                 "name": "urlfinder",
                 "version": "202311081055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/urlfinder.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/urlfinder.zip",
                 "msg": "无更新提示"
         },
         {
                 "name": "w_thinkphp",
                 "version": "202311081055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_thinkphp.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/w_thinkphp.zip",
                 "msg": "无更新提示"
         },
         {
                 "name": "sqlmap",
                 "version": "202311221102",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmap.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmap.zip",
                 "msg": "dev版本导致部分注入无法测试,回退到1.7稳定版本"
         },
         {
                 "name": "SocialEngineeringDictionaryGenerator",
                 "version": "202311302055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/SocialEngineeringDictionaryGenerator.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/SocialEngineeringDictionaryGenerator.zip",
                 "msg": "无更新提示"
         },
         {
                 "name": "w_xray",
                 "version": "202402050935",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_xray.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/w_xray.zip",
                 "msg": "xray+xpoc的合成包"
         },
         {
                 "name": "w_shiro",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_shiro.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/w_shiro.zip",
                 "msg": "无更新提示"
         },
         {
                 "name": "server_login",
                 "version": "202311141622",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/server_login.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/server_login.zip",
                 "msg": "批量ssh验证工具"
         },
         {
                 "name": "DataMiner",
                 "version": "202311141622",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/DataMiner.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/DataMiner.zip",
                 "msg": "数据库自动取样工具"
         },
         {
                 "name": "reverse_shell_generator",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/reverse_shell_generator.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/reverse_shell_generator.zip",
                 "msg": "反弹shell生成器"
         },
         {
                 "name": "PackerFuzzer",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/PackerFuzzer.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/PackerFuzzer.zip",
                 "msg": "一款针对Webpack等前端打包工具所构造的网站进行快速、高效安全检测的扫描工具"
         },
         {
                 "name": "MobaXterm",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/MobaXterm.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/MobaXterm.zip",
                 "msg": "MobaXterm 是远程计算机的工具箱。在单个 Windows 应用程序中,它提供了大量为程序员、网站管理员、IT 管理员量身定制的功能。MobaXterm 为 Windows 桌面提供了重要的远程网络工具（SSH、X11、RDP、VNC、FTP、MOSH 等）和Unix 命令（bash、ls、cat、sed、grep、awk、rsync 等）。"
         },
         {
                 "name": "mdut",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/mdut.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/mdut.zip",
                 "msg": "MDUT 全称 Multiple Database Utilization Tools,是一款中文的数据库跨平台利用工具,集合了多种主流的数据库类型。基于前人 SQLTOOLS 的基础开发了这套程序(向 SQLTOOLS 致敬),旨在将常见的数据库利用手段集合在一个程序中,打破各种数据库利用工具需要各种环境导致使用相当不便的隔阂。此外工具以 JAVAFx 作为 GUI 操作界面,界面美观。同时程序还支持多数据库同时操作,每种数据库都相互独立,极大方便了网络安全工作者的使用。"
         },
         {
                 "name": "ihoneyBakFileScan_Modify",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ihoneyBakFileScan_Modify.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/ihoneyBakFileScan_Modify.zip",
                 "msg": "批量网站备份文件扫描器"
         },
         {
                 "name": "heapdump",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/heapdump.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/heapdump.zip",
                 "msg": "HeapDump敏感信息提取工具"
         },
         {
                 "name": "gorailgun",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/gorailgun.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/gorailgun.zip",
                 "msg": "Railgun为一款GUI界面的渗透工具,将部分人工经验转换为自动化,集成了渗透过程中常用到的一些功能,目前集成了端口扫描、端口爆破、web指纹扫描、漏洞扫描、漏洞利用以及编码转换功能,后续会持续更新。"
         },
         {
                 "name": "godzilla",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/godzilla.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/godzilla.zip",
                 "msg": "godzilla"
         },
         {
                 "name": "fastgithub",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fastgithub.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/fastgithub.zip",
                 "msg": "github定制版的dns服务,解析访问github最快的ip"
         },
         {
                 "name": "dumpall",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dumpall.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/dumpall.zip",
                 "msg": "一款信息泄漏利用工具,适用于.git/.svn/.DS_Store泄漏和目录列出"
         },
         {
                 "name": "dirsearch",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/dirsearch.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/dirsearch.zip",
                 "msg": "Web path scanner"
         },
         {
                 "name": "burpsuite",
                 "version": "202401301537",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/burpsuite.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/burpsuite.zip",
                 "msg": "抓包工具"
         },
         {
                 "name": "antsword",
                 "version": "202311302055",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/antsword.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/antsword.zip",
                 "msg": "中国蚁剑是一款跨平台的开源网站管理工具。"
         },
         {
                 "name": "ak_search",
                 "version": "202311072223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ak_search.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/ak_search.zip",
                 "msg": "各大公网云ak等敏感信息查找工具"
         },
         {
                 "name": "behinder",
                 "version": "202311052223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/behinder.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/behinder.zip",
                 "msg": "冰蝎"
         },
         {
                 "name": "BBScan",
                 "version": "202311052223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/BBScan.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/BBScan.zip",
                 "msg": "BBScan 是一个高并发、轻量级的信息泄露扫描工具。"
         },
         {
                 "name": "w_nacos",
                 "version": "202311052223",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/w_nacos.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/w_nacos.zip",
                 "msg": "nacos利用工具"
         },
         {
                 "name": "ip2domain",
                 "version": "202311051519",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/ip2domain.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/ip2domain.zip",
                 "msg": "通过IP查域名"
         },
         {
                 "name": "fofa_hack",
                 "version": "202401111635",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofa_hack.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/fofa_hack.zip",
                 "msg": "fofa免费版"
         },
         {
                 "name": "webshell_bypass",
                 "version": "202401111635",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/webshell_bypass.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/webshell_bypass.zip",
                 "msg": "webshell免杀"
         },
         {
                 "name": "finger",
                 "version": "202401111635",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/finger.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/finger.zip",
                 "msg": "指纹识别"
         },
         {
                 "name": "enscan",
                 "version": "202311051519",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/enscan.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/enscan.zip",
                 "msg": " 一款基于各大企业信息API的工具,解决在遇到的各种针对国内企业信息收集难题。一键收集控股公司ICP备案、APP、小程序、微信公众号等信息聚合导出。 "
         },
         {
                 "name": "fofamap",
                 "version": "202311051519",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofamap.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/fofamap.zip",
                 "msg": "FofaMap是一款基于Python3开发的跨平台FOFA API数据采集器,支持普通查询、网站存活检测、统计聚合查询、Host聚合查询、网站图标查询、批量查询等查询功能。同时FofaMap还能够自定义查询FOFA数据,并根据查询结果自动去重和筛选关键字,生成对应的Excel表格。另外春节特别版还可以调用Nuclei对FofaMap查询出来的目标进行漏洞扫描,让你在挖洞路上快人一步。"
         },
         {
                 "name": "fofaviewer",
                 "version": "202311051519",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/fofaviewer.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/fofaviewer.zip",
                 "msg": "Fofa Viewer 是一个用 JavaFX 编写的用户友好的 FOFA 客户端,属于 WgpSec 社区,主要由 f1ashine 维护。 利用强大的互联网搜索引擎FoFa,将众多常用的API封装到简洁的UI中,让网络安全专业人士更容易在目标网站上寻找漏洞。 凭借其开箱即用的功能,Fofa Viewer 简化了搜索过程,帮助渗透测试人员快速获取所需信息。"
         },
         {
                 "name": "pandoc",
                 "version": "202311091858",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/pandoc.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/pandoc.zip",
                 "msg": "报告平台核心程序"
         },
         {
                 "name": "powershell",
                 "version": "202311241116",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/powershell.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/powershell.zip",
                 "msg": "依赖程序,必装,更新将关闭所有powershell进程及web服务"
         },
         {
                 "name": "jdk11",
                 "version": "202311051538",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk11.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/jdk11.zip",
                 "msg": "依赖程序,必装"
         },
         {
                 "name": "jdk17",
                 "version": "202311051538",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk17.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/jdk17.zip",
                 "msg": "依赖程序,必装"
         },
         {
                 "name": "jdk1.8",
                 "version": "202311051538",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/jdk1.8.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/jdk1.8.zip",
                 "msg": "依赖程序,必装"
         },
         {
                 "name": "aria2c",
                 "version": "202311050058",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/aria2c.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/aria2c.zip",
                 "msg": "依赖程序,必装"
         },
         {
                 "name": "bandizip",
                 "version": "202311101056",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/bandizip.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/bandizip.zip",
                 "msg": "依赖程序,必装"
         },
         {
                 "name": "python311",
                 "version": "202311050058",
-                "url": "https://gh.con.sh/https://github.com/wwsuixin/ws_tools/releases/download/main/python311.zip",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/python311.zip",
                 "msg": "依赖程序,必装"
         }
 ]

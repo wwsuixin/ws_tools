@@ -1,7 +1,7 @@
 [
         {
                 "name": "ws_tools",
-                "version": "202402201611",
+                "version": "2024022694247",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
                 "msg": "[主程序]核心程序,请及时更新,更新后自动重启服务,如果一直显示升级请运行[核心重装脚本.bat]"
         },
@@ -91,9 +91,15 @@
         },
         {
                 "name": "sqlmap",
-                "version": "202311221102",
+                "version": "2024022694247",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmap.zip",
-                "msg": "dev版本导致部分注入无法测试,回退到1.7稳定版本"
+                "msg": "升级到1.8"
+        },
+        {
+                "name": "sqlmapxplus",
+                "version": "2024022694247",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/sqlmapxplus.zip",
+                "msg": "SqlmapXPlus 基于 Sqlmap，对经典的数据库漏洞利用工具进行二开，参考各种解决方法，增加MSSQL数据库注入的利用方式"
         },
         {
                 "name": "SocialEngineeringDictionaryGenerator",

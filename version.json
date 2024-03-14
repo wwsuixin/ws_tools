@@ -1,13 +1,13 @@
 [
         {
                 "name": "ws_tools",
-                "version": "2024022694247",
+                "version": "20240311100434",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
                 "msg": "[主程序]核心程序,请及时更新,更新后自动重启服务,如果一直显示升级请运行[核心重装脚本.bat]"
         },
         {
                 "name": "hvv_sql",
-                "version": "202312271710",
+                "version": "20240311100434",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/hvv_sql.zip",
                 "msg": "hvv数据库批量验证脚本"
         },
@@ -331,8 +331,14 @@
         },
         {
                 "name": "TscanPlus",
-                "version": "202402201611",
+                "version": "20240311100434",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/TscanPlus.zip",
                 "msg": "端口扫描、目录扫描、域名枚举、网络空间测绘、密码生成"
+        },
+        {
+                "name": "webshell_generate",
+                "version": "20240311100434",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/webshell_generate.zip",
+                "msg": "webshell生成工具"
         }
 ]

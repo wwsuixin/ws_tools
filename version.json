@@ -1,7 +1,7 @@
 [
         {
                 "name": "ws_tools",
-                "version": "20240311100434",
+                "version": "20240315172605",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/ws_tools.zip",
                 "msg": "[主程序]核心程序,请及时更新,更新后自动重启服务,如果一直显示升级请运行[核心重装脚本.bat]"
         },
@@ -199,7 +199,7 @@
         },
         {
                 "name": "burpsuite",
-                "version": "202401301537",
+                "version": "20240315172605",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/burpsuite.zip",
                 "msg": "抓包工具"
         },
@@ -286,6 +286,12 @@
                 "version": "202311241116",
                 "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/powershell.zip",
                 "msg": "依赖程序,必装,更新将关闭所有powershell进程及web服务"
+        },
+        {
+                "name": "jdk21",
+                "version": "20240315172605",
+                "url": "https://github.com/wwsuixin/ws_tools/releases/download/main/jdk21.zip",
+                "msg": "依赖程序,必装"
         },
         {
                 "name": "jdk11",

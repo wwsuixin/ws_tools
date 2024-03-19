@@ -27,7 +27,8 @@ if not exist tmp (
 
 if not exist w_version.txt (
     echo [-]Detected that the current environment is not installed, start downloading and running the script
-    start /B  /WAIT env/github_download/github_download.exe -i http://222.240.1.20:60003/static/output/ws_tools_files/ws_tools.zip -o tmp/ws_tools.zip
+    powershell -ExecutionPolicy Bypass -Command "& {iwr -useb http://222.240.1.20:60003/static/output/ws_tools_files/ws_tools.zip -OutFile tmp/ws_tools.zip}"
+    @REM start /B  /WAIT env/github_download/github_download.exe -i http://222.240.1.20:60003/static/output/ws_tools_files/ws_tools.zip -o tmp/ws_tools.zip
     powershell -ExecutionPolicy Bypass -Command "Expand-Archive -Path 'tmp\ws_tools.zip' -DestinationPath './' -Force"
 )
 

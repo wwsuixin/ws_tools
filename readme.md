@@ -3,6 +3,7 @@
 # 安装说明
 ## 先看注意
 
+- **运行出现任何问题都可以执行【核心重装脚本.bat】，不影响已安装工具的**
 - **当前项目不支持存在中文路径**
 - **运行安装脚本出现乱码：解决方案：cmd /c "chcp 936 > nul && type start.bat >  start.bat.tmp && move /y  start.bat.tmp  start.bat"**
 - **运行start.bat即可进行安装，后续使用也仅需要双击该bat文件启动**
